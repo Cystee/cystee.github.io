@@ -1,0 +1,19 @@
+User-agent: *
+Disallow: /blog/
+Disallow: /send/
+
+
+#             @@@OOOO,           
+#        @@@@@@@OOO/[.,[OOO,     
+#   ,@@@@@@OOOOO`   .   =OO@@,   
+#  ,@@@@@@@@OO`  ,OOOO   OOO@@@, 
+# ,O@@@@OOOO/  ,OOOOOO   OOO@@@@,
+# O@@@@OOOO`  =OOOOOO[  ,OO@@@@OO
+# @@@@@OOO.             =OO@@@@OO
+# @@@@@OO   OOO]]OOOO   OOO@@@@OO
+# O@@@@O   /OOO@@@@O^  =OOO@@@@OO
+#  @@@@^  =@OOO@@@@/  ,OO@O@@@@O 
+#  ,@@@  ^@O@@@@OOO   OO@@@@OOO, 
+#   ,@@@O]/O@@@@OOOO]]OO@@@@OO,  
+#       ,OOO@@@@@@@@@@@@OOO,     
+#            @@@OOOO,            
