@@ -19,7 +19,7 @@ a {
     -webkit-transition: border-bottom-color 0.2s ease, color 0.2s ease;
     -ms-transition: border-bottom-color 0.2s ease, color 0.2s ease;
     transition: border-bottom-color 0.2s ease, color 0.2s ease;
-    border-bottom: dotted 1px rgba(255, 255, 255, 0.25);
+    border-bottom: dotted 2px black;
     text-decoration: none;
 }
 
