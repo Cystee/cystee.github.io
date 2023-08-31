@@ -348,9 +348,9 @@ height: 100%;
 top: 0;
 left: 0;
 }
-#about-page .author-img:hover {
+#about-page :hover {
     transform: scale(1.1);
-}
+}.author-img{transition: .3s;}
 @media screen and (min-width: 1300px){
 .author-content-item {
     animation: slide-in .6s 0s backwards;
@@ -361,8 +361,10 @@ left: 0;
                             </style>
                             <div class="author-content-item customwidget1">
                                 <div class="card-content">
-                                    <div class="author-content-item-tips">爱好游戏</div>
-                                    <span class="author-content-item-title">崩坏：星穹铁道</span>
+                                    <div class="author-content-item-tips">
+                                        爱好游戏
+                                        <span class="author-content-item-title" style="padding-left: 1em;">崩坏：星穹铁道</span>
+                                    </div>
                                     <div class="content-bottom">
                                         <div class="tips">UID 104128567</div>
                                     </div>
@@ -382,11 +384,13 @@ left: 0;
                             </div>
                         </div>
                         <div class="author-content">
-                            <div class="author-content-item like-technology" style="background: url(/img/copyright_by_casecori.jpg) no-repeat;">
+                            <div class="author-content-item like-technology" style="background: url(/img/copyright_by_casecori.jpg) no-repeat;background-position: center">
                                 <div class="card-content">
                                     <div class="author-content-item-tips">关注偏好</div>
-                                    <span class="author-content-item-title">科技 学习
-                                        <br>游戏 流行梗 鬼畜
+                                    <span class="author-content-item-title" style="line-height: 1.5;">
+                                        科技 学习
+                                        <br>
+                                        游戏 流行梗 鬼畜
                                     </span>
                                     <div class="content-bottom">
                                         <div class="tips">游走在各大官网</div>
@@ -396,8 +400,10 @@ left: 0;
                             <div class="author-content-item like-music">
                                 <div class="card-content">
                                     <div class="author-content-item-tips">音乐偏好</div>
-                                    <span class="author-content-item-title">Bandari
-                                        <br>经典金曲 流行金曲
+                                    <span class="author-content-item-title" style="line-height: 1.5;">
+                                        Bandari
+                                        <br>
+                                        经典金曲 流行金曲
                                     </span>
                                     <div class="content-bottom">
                                         <div class="tips">少而精</div>
@@ -473,9 +479,15 @@ left: 0;
                                 </div>
                             </div>
                         </div>
-                        <a class="footer-banner-link" href="https://beian.miit.gov.cn/" rel="external nofollow noreferrer" target="_blank">渝 ICP 备 2023009367 号</a>
                         <div class="footer-banner-right">
                             <a class="footer-banner-link" href="https://www.casecori.top/atom.xml">订阅</a>
+                            <a
+                                class="footer-banner-link"
+                                href="https://beian.miit.gov.cn/"
+                                rel="external nofollow noreferrer"
+                                target="_blank"
+                                style="padding-left: 2em;"
+                            >渝 ICP 备 2023009367 号</a>
                         </div>
                     </div>
                 </div>
