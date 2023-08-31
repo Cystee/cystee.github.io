@@ -45,12 +45,18 @@
                     <div class="author-content">
                         <div class="author-content-item myInfoAndSayHello">
                             <div class="title1">欢迎👋</div>
-                            <div class="title1">
-                                你可以叫我
-                                <span class="inline-word">CasecoRI</span>
+                            <div>
+                                <span class="title1">
+                                    你可以叫我
+                                </span>
+                                <span class="title2">CasecoRI</span>
                             </div>
                             <div class="title1">是一名 大学牲、Blogger</div>
                         </div>
+                        <style>.aboutsiteTips .mask{
+                          width: 500px;
+                        }
+                        </style>
                         <div class="aboutsiteTips author-content-item">
                             <div class="author-content-item-tips">命座</div>
                             <h2>
@@ -60,12 +66,12 @@
                                     <span>躺平摆烂小问题</span>
                                     <span data-up="">越花越挣很容易</span>
                                 </div>
-                                <small>
-                                    当前：
-                                    <span style="color: chartreuse;">
-                                        <span style="font-size: large;font-weight: bold;">1</span> 命</span>
-                                </small>
                             </h2>
+                            <div style="font-size: large;">
+                                当前：
+                                <span style="color: #0ec15d;">
+                                    <span style="font-size: 36px;font-weight: 900;">1</span> 命</span>
+                            </div>
                         </div>
                     </div>
                     <script>
@@ -364,25 +370,25 @@
                         <div class="author-content-item like-music">
                             <div class="card-content">
                                 <div class="author-content-item-tips">音乐偏好</div>
-                                <span class="author-content-item-title">Bandari、流行金曲、经典金曲</span>
+                                <span class="author-content-item-title">Bandari、经典金曲、流行金曲</span>
                                 <div class="content-bottom">
                                     <div class="tips">少而精</div>
                                 </div>
                             </div>
                         </div>
                     </div>
-                        <div class="about-statistic author-content-item">
-                            <div class="card-content">
-                                <div class="author-content-item-tips">数据</div>
-                                <span class="author-content-item-title">访问统计</span>
-                                <div id="statistic"></div>
-                                <div class="post-tips">
-                                    统计信息来自
-                                    <a href="https://invite.51.la/1NzKqTeb?target=V6" target="_blank" rel="noopener nofollow">51la网站统计</a>
-                                </div>
+                    <div class="about-statistic author-content-item">
+                        <div class="card-content">
+                            <div class="author-content-item-tips">数据</div>
+                            <span class="author-content-item-title">访问统计</span>
+                            <div id="statistic"></div>
+                            <div class="post-tips">
+                                统计信息来自
+                                <a href="https://invite.51.la/1NzKqTeb?target=V6" target="_blank" rel="noopener nofollow">51la网站统计</a>
                             </div>
                         </div>
-                        <script>
+                    </div>
+                    <script>
                 fetch("https://v6-widget.51.la/v6/K1YP40q2oKghYowU/quote.js")
                   .then(res => res.text())
                   .then(data => {
@@ -400,29 +406,29 @@
                       s.innerHTML += "<div><span>" + title[i] + "</span><span id=" + title[i] + ">" + num[i] + "</span></div>";
                     }
                   });
-                        </script>
-                        <div class="author-content-item-group column mapAndInfo">
-                            <div class="author-content-item map single">
-                                <span class="map-title">
-                                    我现在住在
-                                    <b>(30°N,100~110°E)</b>
-                                </span>
+                    </script>
+                    <div class="author-content-item-group column mapAndInfo">
+                        <div class="author-content-item map single">
+                            <span class="map-title">
+                                我现在住在
+                                <b>(30°N,100~110°E)</b>
+                            </span>
+                        </div>
+                        <div class="author-content-item selfInfo single">
+                            <div>
+                                <span class="selfInfo-title">生于</span>
+                                <span class="selfInfo-content" style="color: #43a6c6;">2004</span>
                             </div>
-                            <div class="author-content-item selfInfo single">
-                                <div>
-                                    <span class="selfInfo-title">生于</span>
-                                    <span class="selfInfo-content" style="color: #43a6c6;">2004</span>
-                                </div>
-                                <div>
-                                    <span class="selfInfo-title">CWNU</span>
-                                    <span class="selfInfo-content" style="color: #c69043;">地理科学类</span>
-                                </div>
-                                <div>
-                                    <span class="selfInfo-title">现在职业</span>
-                                    <span class="selfInfo-content" style="color: #b04fe6;">学生</span>
-                                </div>
+                            <div>
+                                <span class="selfInfo-title">CWNU</span>
+                                <span class="selfInfo-content" style="color: #c69043;">地理科学类</span>
+                            </div>
+                            <div>
+                                <span class="selfInfo-title">现在职业</span>
+                                <span class="selfInfo-content" style="color: #b04fe6;">学生</span>
                             </div>
                         </div>
+                    </div>
                     <div class="author-content">
                         <div class="create-site-post author-content-item single">
                             <div class="author-content-item-tips">心路历程</div>
