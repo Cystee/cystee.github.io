@@ -389,18 +389,19 @@
                                 </div>
                             </div>
                         </div>
-                        <div class="about-statistic author-content-item">
-                            <div class="card-content">
-                                <div class="author-content-item-tips">数据</div>
-                                <span class="author-content-item-title">访问统计</span>
-                                <div id="statistic"></div>
-                                <div class="post-tips">
-                                    统计信息来自
-                                    <a href="https://invite.51.la/1NzKqTeb?target=V6" target="_blank" rel="noopener nofollow">51la网站统计</a>
+                        <div class="author-content">
+                            <div class="about-statistic author-content-item">
+                                <div class="card-content">
+                                    <div class="author-content-item-tips">数据</div>
+                                    <span class="author-content-item-title">访问统计</span>
+                                    <div id="statistic"></div>
+                                    <div class="post-tips">
+                                        统计信息来自
+                                        <a href="https://invite.51.la/1NzKqTeb?target=V6" target="_blank" rel="noopener nofollow">51la网站统计</a>
+                                    </div>
                                 </div>
                             </div>
-                        </div>
-                        <script>
+                            <script>
                 fetch("https://v6-widget.51.la/v6/K1YP40q2oKghYowU/quote.js")
                   .then(res => res.text())
                   .then(data => {
@@ -418,26 +419,27 @@
                       s.innerHTML += "<div><span>" + title[i] + "</span><span id=" + title[i] + ">" + num[i] + "</span></div>";
                     }
                   });
-                        </script>
-                        <div class="author-content-item-group column mapAndInfo">
-                            <div class="author-content-item map single">
-                                <span class="map-title">
-                                    我现在住在
-                                    <b>(30°N,100~110°E)</b>
-                                </span>
-                            </div>
-                            <div class="author-content-item selfInfo single">
-                                <div>
-                                    <span class="selfInfo-title">生于</span>
-                                    <span class="selfInfo-content" style="color: #43a6c6;">2004</span>
+                            </script>
+                            <div class="author-content-item-group column mapAndInfo">
+                                <div class="author-content-item map single">
+                                    <span class="map-title">
+                                        我现在住在
+                                        <b>(30°N,100~110°E)</b>
+                                    </span>
                                 </div>
-                                <div>
-                                    <span class="selfInfo-title">CWNU</span>
-                                    <span class="selfInfo-content" style="color: #c69043;">地理科学类</span>
-                                </div>
-                                <div>
-                                    <span class="selfInfo-title">现在职业</span>
-                                    <span class="selfInfo-content" style="color: #b04fe6;">学生</span>
+                                <div class="author-content-item selfInfo single">
+                                    <div>
+                                        <span class="selfInfo-title">生于</span>
+                                        <span class="selfInfo-content" style="color: #43a6c6;">2004</span>
+                                    </div>
+                                    <div>
+                                        <span class="selfInfo-title">CWNU</span>
+                                        <span class="selfInfo-content" style="color: #c69043;">地理科学类</span>
+                                    </div>
+                                    <div>
+                                        <span class="selfInfo-title">现在职业</span>
+                                        <span class="selfInfo-content" style="color: #b04fe6;">学生</span>
+                                    </div>
                                 </div>
                             </div>
                         </div>
