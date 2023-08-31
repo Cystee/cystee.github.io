@@ -389,11 +389,14 @@ left: 0;
                             </style>
                             <div class="author-content-item customwidget1">
                                 <div class="card-content" style="writing-mode: vertical-rl;">
-                                    <span class="author-content-item-tips" style="text-shadow: 0px 0px 20px #fff;color: rgba(0,0,0,.6);margin-left: 0.5rem;font-weight: bold;font-size: smaller;">爱好游戏
+                                    <span class="author-content-item-tips" style="text-shadow: 0px 0px 20px #fff;color: rgba(0,0,0,.6);margin-left: 0.5rem;font-weight: bold;font-size: smaller;">
+                                        爱好游戏
                                     </span>
-                                    <span class="author-content-item-title" style="padding-left: 1em;text-shadow: 0px 0px 1px #ffffff;">崩坏
+                                    <span class="author-content-item-title" style="padding-left: 1em;text-shadow: 0px 0px 2px #ffffff;">
+                                        崩坏
                                         <i class="fa-sharp fa-solid fa-colon fa-rotate-90"></i>
-                                        <br>星穹铁道
+                                        <br>
+                                        星穹铁道
                                     </span>
                                     <div class="content-bottom" style="writing-mode:rl;margin-right: auto">
                                         <div class="tips">UID 104128567</div>
@@ -499,7 +502,102 @@ left: 0;
                 </div>
             </main>
             <footer id="footer">
-                <div id="footer-banner">
+                <style>/* 波浪css */
+.main-hero-waves-area {
+  width: 100%;
+  position: absolute;
+  left: 0;
+  bottom: 0px;
+  z-index: 101;
+}
+.waves-area .waves-svg {
+  width: 100%;
+  height: 5rem;
+}
+/* Animation */
+
+.parallax > use {
+  animation: move-forever 25s cubic-bezier(0.55, 0.5, 0.45, 0.5) infinite;
+}
+.parallax > use:nth-child(1) {
+  animation-delay: -2s;
+  animation-duration: 7s;
+  fill: #f1f3f8;
+}
+.parallax > use:nth-child(2) {
+  animation-delay: -3s;
+  animation-duration: 10s;
+  fill: #f7f9fe82;
+}
+.parallax > use:nth-child(3) {
+  animation-delay: -4s;
+  animation-duration: 13s;
+  fill: #f7f9fe36;
+}
+.parallax > use:nth-child(4) {
+  animation-delay: -5s;
+  animation-duration: 20s;
+  fill: #f7f9fe;
+}
+/* 黑色模式背景 */
+[data-theme="dark"] .parallax > use:nth-child(1) {
+  animation-delay: -2s;
+  animation-duration: 7s;
+  fill: #18171dc8;
+}
+[data-theme="dark"] .parallax > use:nth-child(2) {
+  animation-delay: -3s;
+  animation-duration: 10s;
+  fill: #18171d80;
+}
+[data-theme="dark"] .parallax > use:nth-child(3) {
+  animation-delay: -4s;
+  animation-duration: 13s;
+  fill: #18171d3e;
+}
+[data-theme="dark"] .parallax > use:nth-child(4) {
+  animation-delay: -5s;
+  animation-duration: 20s;
+  fill: #18171d;
+}
+
+@keyframes move-forever {
+  0% {
+    transform: translate3d(-90px, 0, 0);
+  }
+  100% {
+    transform: translate3d(85px, 0, 0);
+  }
+}
+/*Shrinking for mobile*/
+@media (max-width: 768px) {
+  .waves-area .waves-svg {
+    height: 40px;
+    min-height: 40px;
+  }
+}
+                </style>
+                <section class="main-hero-waves-area waves-area">
+                    <svg
+                        class="waves-svg"
+                        xmlns="http://www.w3.org/2000/svg"
+                        xlink="http://www.w3.org/1999/xlink"
+                        viewBox="0 24 150 28"
+                        preserveAspectRatio="none"
+                        shape-rendering="auto"
+                    >
+                        <defs>
+                            <path id="gentle-wave" d="M -160 44 c 30 0 58 -18 88 -18 s 58 18 88 18 s 58 -18 88 -18 s 58 18 88 18 v 44 h -352 Z"></path>
+                        </defs>
+                        <g class="parallax">
+                            <use href="#gentle-wave" x="48" y="0"></use>
+                            <use href="#gentle-wave" x="48" y="3"></use>
+                            <use href="#gentle-wave" x="48" y="5"></use>
+                            <use href="#gentle-wave" x="48" y="7"></use>
+                        </g>
+                    </svg>
+                </section>
+                <div id="footer-banner" style="margin-top: 0rem;">
                     <div class="footer-banner-links">
                         <div class="footer-banner-left">
                             <div id="footer-banner-tips">
