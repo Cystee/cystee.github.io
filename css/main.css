@@ -5351,29 +5351,24 @@ a.console_switchbutton {
 .pace {
   -webkit-pointer-events: none;
   pointer-events: none;
-
   -webkit-user-select: none;
   -moz-user-select: none;
   user-select: none;
-
   z-index: 2000;
   position: fixed;
   margin: auto;
-  top: 4px;
+  top: 10px;
   left: 0;
   right: 0;
   height: 8px;
   border-radius: 8px;
   width: 4rem;
-  background: var(--heo-secondbg);
-  border: var(--style-border);
-
+  background: #eaecf2;
+  border: 1px #e3e8f7;
   overflow: hidden;
 }
 
 .pace-inactive .pace-progress {
-  /* display: none; */
-  /* animation: 1s hidetip; */
   opacity: 0;
   transition: 0.3s ease-in;
 }
@@ -5384,32 +5379,42 @@ a.console_switchbutton {
   -ms-box-sizing: border-box;
   -o-box-sizing: border-box;
   box-sizing: border-box;
-
   -webkit-transform: translate3d(0, 0, 0);
   -moz-transform: translate3d(0, 0, 0);
   -ms-transform: translate3d(0, 0, 0);
   -o-transform: translate3d(0, 0, 0);
   transform: translate3d(0, 0, 0);
-
   max-width: 200px;
-  position: fixed;
+  position: absolute;
   z-index: 2000;
   display: block;
-  position: absolute;
   top: 0;
   right: 100%;
   height: 100%;
   width: 100%;
-  background: var(--heo-logo-color);
-  animation: gradient 2s ease infinite;
+  background: linear-gradient(-45deg, #ee7752, #e73c7e, #23a6d5, #23d5ab);
+  animation: gradient 1.5s ease infinite;
   background-size: 200%;
 }
 
 .pace.pace-inactive {
-  /* display: none; */
   opacity: 0;
   transition: 0.3s;
   top: -8px;
+}
+
+@keyframes gradient {
+  0% {
+    background-position: 0% 50%;
+  }
+
+  50% {
+    background-position: 100% 50%;
+  }
+
+  100% {
+    background-position: 0% 50%;
+  }
 }
 
 /* 进度条缓慢消失 */

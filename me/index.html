@@ -17,7 +17,7 @@
     <link rel="stylesheet" href="/css/var.css">
     <link rel="stylesheet" href="/css/main.css">
     <link rel="stylesheet" href="/css/custom.css">
-    <script data-pace-options="{ &quot;restartOnRequestAfter&quot;:false,&quot;eventLag&quot;:false}"
+    <script data-pace-options="{ 'restartOnRequestAfter':false,'eventLag':false}"
         src="https://lf6-cdn-tos.bytecdntp.com/cdn/expire-1-M/pace/1.2.4/pace.min.js"></script>
     <link rel="stylesheet" href="/css/all.css">
     <link rel="stylesheet" href="/css/brands.css">
@@ -39,6 +39,34 @@
 </head>
 
 <body id="body">
+    <div id="loading-box" onclick="document.getElementById('loading-box').classList.add('loaded')">
+        <div class="loading-bg">
+            <div class="loading-img"
+                style="background-image:url(/img/avatar.webp);background-repeat: no-repeat;background-position:center;">
+            </div>
+            <div class="loading-image-dot"></div>
+        </div>
+    </div>
+    <script>const preloader = {
+            endLoading: () => {
+                document.body.style.overflow = 'scroll';
+                document.getElementById('loading-box').classList.add("loaded")
+            },
+            initLoading: () => {
+                document.body.style.overflow = 'scroll';
+                document.getElementById('loading-box').classList.remove("loaded")
+
+            }
+        }
+
+        preloader.initLoading()
+        window.addEventListener('load', () => { preloader.endLoading() })
+
+        if (true) {
+            document.addEventListener('pjax:send', () => { preloader.initLoading() })
+            document.addEventListener('pjax:complete', () => { preloader.endLoading() })
+        }</script>
+
     <style>
         @import url("https://fonts.googleapis.com/css?family=Fredoka+One");
 
@@ -803,7 +831,6 @@
     <div>
         <script type="text/javascript" src="/js/utils.js"></script>
         <script type="text/javascript" src="/js/main2.js"></script>
-        <script src="/lib/pjax.min.js"></script>
         <script src="/lib/snackbar.min.js"></script>
         <script src="/lib/view-image.min.js"></script>
         <div id="js-pjax">
@@ -817,37 +844,6 @@
         <script src="https://sdk.51.la/perf/js-sdk-perf.min.js" crossorigin="anonymous"></script>
         <script>new LingQue.Monitor().init({ id: "K1YP40q2oKghYowU", sendSuspicious: true });</script>
         <script src="/js/extend/covercolor/local.js"></script>
-        <script>
-            let pjaxSelectors = [
-                'title',
-                '#body-wrap',
-                '#site-config',
-                'meta[name="description"]',
-                '#js-pjax'
-            ]
-
-            const pjax = new Pjax({
-                elements: 'a:not([target="_blank"])',
-                selectors: pjaxSelectors,
-                cacheBust: false,
-                analytics: false,
-                scrollRestoration: false
-            })
-
-            document.querySelectorAll('script[data-pjax]').forEach(item => {
-                const newScript = document.createElement('script')
-                const content = item.text || item.textContent || item.innerHTML || ""
-                Array.from(item.attributes).forEach(attr => newScript.setAttribute(attr.name, attr.value))
-                newScript.appendChild(document.createTextNode(content))
-                item.parentNode.replaceChild(newScript, item)
-            })
-
-            document.addEventListener('pjax:error', (e) => {
-                if (e.request.status === 404) {
-                    pjax.loadUrl('/404.html')
-                }
-            })
-        </script>
     </div>
     <script>var meting_api = 'https://meting.zhheo.com/?server=:server&type=:type&id=:id&auth=:auth&r=:r';</script>
     <div class="needEndHide" id="nav-music" onclick="acrylic.musicToggle()">
