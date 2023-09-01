@@ -30,8 +30,6 @@
     <link rel="stylesheet" href="/css/regular.css">
     <link rel="stylesheet" href="/css/solid.css">
     <link rel="stylesheet" href="/css/thin.css">-->
-    <link rel="stylesheet" href="https://lf9-cdn-tos.bytecdntp.com/cdn/expire-1-M/aplayer/1.10.1/APlayer.min.css">
-    <script src="https://lf3-cdn-tos.bytecdntp.com/cdn/expire-1-M/aplayer/1.10.1/APlayer.min.js"></script>
     <link rel="stylesheet" href="/lib/snackbar.min.css">
     <script src="/lib/qrcode.min.js"></script>
     <script>var GLOBALCONFIG = { "root": "/", "runtime": "2021-10-15 14:00:00", "lazyload": { "enable": false, "error": "/img/acrylic.png" }, "hightlight": { "enable": true, "limit": 200 }, "lightbox": true, "randomlinks": true, "lang": { "theme": { "dark": "已切换至深色模式", "light": "已切换至浅色模式" }, "copy": { "success": "复制成功", "error": "复制失败" }, "backtop": "返回顶部", "time": { "recent": "最近", "yesterday": "昨天", "berforeyesterday": "前天", "daybefore": "天前", "runtime": "天" }, "sayhello": { "morning": "早上好", "noon": "中午好", "afternoon": "下午好", "night": "晚上好", "goodnight": "晚安", "iam": "!  我是" }, "search": { "empty": "搜索结果为空", "hit": "已为您找到 ${query} 条结果", "placeholder": "输入关键词快速查找" } }, "covercolor": true, "localsearch": { "preload": false, "path": "/search.xml" } };</script>
@@ -808,8 +806,10 @@
         <script src="/lib/view-image.min.js"></script>
         <div id="js-pjax">
             <script async src="https://npm.elemecdn.com/penndu@1.0.0/bsz.js"></script>
-            <script src="/js/meting.min.js"></script>
         </div>
+        <link rel="stylesheet" href="https://lf9-cdn-tos.bytecdntp.com/cdn/expire-1-M/aplayer/1.10.1/APlayer.min.css">
+        <script src="https://lf3-cdn-tos.bytecdntp.com/cdn/expire-1-M/aplayer/1.10.1/APlayer.min.js"></script>
+        <script src="/js/meting.min.js"></script>
         <script charset="UTF-8" id="LA_COLLECT" src="//sdk.51.la/js-sdk-pro.min.js"></script>
         <script>LA.init({ id: "K1YP40q2oKghYowU", ck: "K1YP40q2oKghYowU" })</script>
         <script src="https://sdk.51.la/perf/js-sdk-perf.min.js" crossorigin="anonymous"></script>
@@ -847,12 +847,12 @@
             })
         </script>
     </div>
+    <script>var meting_api = 'https://api.injahow.cn/meting/?server=:server&type=:type&id=:id&auth=:auth&r=:r';</script>
     <div class="needEndHide" id="nav-music" onclick="acrylic.musicToggle()">
         <div id="nav-music-hoverTips">音乐已暂停</div>
         <meting-js id="8609141316" server="netease" type="playlist" mutex="true" preload="none" data-lrctype="0"
             order="random" theme="var(--heo-main)"></meting-js>
     </div>
-    <script>var meting_api = 'https://meting.casecori.top/api/?server=:server&type=:type&id=:id&auth=:auth&r=:r';</script>
 </body>
 
 </html>
