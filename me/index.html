@@ -17,8 +17,6 @@
     <link rel="stylesheet" href="/css/var.css">
     <link rel="stylesheet" href="/css/main.css">
     <link rel="stylesheet" href="/css/custom.css">
-    <script data-pace-options="{ 'restartOnRequestAfter':false,'eventLag':false}"
-        src="https://lf6-cdn-tos.bytecdntp.com/cdn/expire-1-M/pace/1.2.4/pace.min.js"></script>
     <link rel="stylesheet" href="/css/all.css">
     <link rel="stylesheet" href="/css/brands.css">
     <link rel="stylesheet" href="/css/duotone.css">
@@ -65,7 +63,17 @@
         if (true) {
             document.addEventListener('pjax:send', () => { preloader.initLoading() })
             document.addEventListener('pjax:complete', () => { preloader.endLoading() })
-        }</script>
+        }
+    </script>
+    <script>window.paceOptions = {
+            restartOnPushState: false
+        }
+
+        document.addEventListener('pjax:send', () => {
+            Pace.restart()
+        })
+    </script>
+    <script src="https://cdn.casecori.top/npm/pace-js/pace.min.js"></script>
 
     <style>
         @import url("https://fonts.googleapis.com/css?family=Fredoka+One");
@@ -836,21 +844,21 @@
         <div id="js-pjax">
             <script async src="https://npm.elemecdn.com/penndu@1.0.0/bsz.js"></script>
         </div>
-        <link rel="stylesheet" href="/js/APlayer.min.css">
+        <!-- <link rel="stylesheet" href="/js/APlayer.min.css">
         <script src="/js/APlayer.min.js"></script>
-        <script src="/js/Meting2.min.js"></script>
+        <script src="/js/Meting2.min.js"></script> -->
         <script charset="UTF-8" id="LA_COLLECT" src="//sdk.51.la/js-sdk-pro.min.js"></script>
         <script>LA.init({ id: "K1YP40q2oKghYowU", ck: "K1YP40q2oKghYowU" })</script>
         <script src="https://sdk.51.la/perf/js-sdk-perf.min.js" crossorigin="anonymous"></script>
         <script>new LingQue.Monitor().init({ id: "K1YP40q2oKghYowU", sendSuspicious: true });</script>
         <script src="/js/extend/covercolor/local.js"></script>
     </div>
-    <script>var meting_api = 'https://meting.zhheo.com/?server=:server&type=:type&id=:id&auth=:auth&r=:r';</script>
+    <!-- <script>var meting_api = 'https://meting.zhheo.com/?server=:server&type=:type&id=:id&auth=:auth&r=:r';</script>
     <div class="needEndHide" id="nav-music" onclick="acrylic.musicToggle()">
         <div id="nav-music-hoverTips">音乐已暂停</div>
         <meting-js id="8668419170" server="tencent" type="playlist" mutex="true" preload="none" data-lrctype="0"
             order="random" theme="var(--heo-main)"></meting-js>
-    </div>
+    </div> -->
 </body>
 
 </html>
