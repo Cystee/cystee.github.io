@@ -34,7 +34,11 @@
     <script
         id="site-config">var PAGECONFIG = { "is_home": false, "is_post": false, "is_page": true, "page": "about", "toc": false, "comment": true };</script>
     <meta name="generator" content="Hexo 6.3.0">
-    <style>body{overflow: auto!important;}</style>
+    <style>
+        body {
+            overflow: auto !important;
+        }
+    </style>
 </head>
 
 <body id="body" style="overflow: auto !important;">
@@ -77,7 +81,14 @@
     <script src="https://lf6-cdn-tos.bytecdntp.com/cdn/expire-1-M/pace/1.2.4/pace.min.js"></script>
 
     <style>
-        @import url("https://fonts.googleapis.com/css?family=Fredoka+One");
+        /*@import url("https://fonts.googleapis.com/css?family=Fredoka+One");*/
+        @font-face {
+            font-family: 'Fredoka One';
+            font-style: normal;
+            font-weight: 400;
+            src: local("./font/k3kUo8kEI-tA1RRcTZGmTlHGCac.woff2") format('woff2');
+            unicode-range: U+0000-00FF, U+0131, U+0152-0153, U+02BB-02BC, U+02C6, U+02DA, U+02DC, U+0304, U+0308, U+0329, U+2000-206F, U+2074, U+20AC, U+2122, U+2191, U+2193, U+2212, U+2215, U+FEFF, U+FFFD;
+        }
 
         .store-container {
             position: absolute;
@@ -423,7 +434,7 @@
                                     <div class="name">CWNU, 地理科学</div>
                                 </div>
                             </div>
-                            <img class="author-content-img" src="/img/syy.png" alt="生涯">
+                            <img class="author-content-img" style="bottom: 0;" src="/img/syy.png" alt="生涯">
                         </div>
                     </div>
                 </div>
@@ -452,8 +463,9 @@
                 <div class="author-content">
                     <div class="author-content-item maxim">
                         <div class="author-content-item-tips">座右铭</div>
-                        <span class="maxim-title">
-                            <span style="opacity: 0.6;margin-bottom:8px;">Do not do to others you do not want to do,</span>
+                        <span class="maxim-title" style="font-size: 20px;">
+                            <span style="opacity: 0.6;margin-bottom:8px;">Do not do to others you do not want to
+                                do,</span>
                             <span>do to others you want to do.</span>
                         </span>
                     </div>
@@ -574,7 +586,8 @@
                             }
                         }
 
-                        .author-content-item.like-technology, .author-content-item.like-music{
+                        .author-content-item.like-technology,
+                        .author-content-item.like-music {
                             min-height: 400px;
                         }
 
