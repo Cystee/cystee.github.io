@@ -244,7 +244,7 @@
                             </style>
                             <span class="title2">CasecoRI</span>
                         </div>
-                        <div class="title1">是一名 大学牲、Blogger</div>
+                        <div class="title1">是一名 大学生、Blogger</div>
                     </div>
                     <style>
                         .aboutsiteTips .mask {
@@ -484,6 +484,103 @@
                         </div>
                     </div>
                 </div>
+                <style>
+                    .customwidget1 {
+                        width: 39%;
+                        background: url(/img/DUCK!.webp) no-repeat top;
+                        background-size: cover;
+                        min-height: 300px;
+                        overflow: hidden;
+                        background-position: 50% 35%;
+                    }
+
+                    .customwidget1::after {
+                        box-shadow: 0 -69px 203px 11px #ffffff inset;
+                        position: absolute;
+                        content: '';
+                        width: 100%;
+                        height: 100%;
+                        top: 0;
+                        left: 0;
+                    }
+
+                    .customwidget2 {
+                        width: 59%;
+                        background: url(/img/terraria.webp) no-repeat top;
+                        background-size: cover;
+                        min-height: 300px;
+                        overflow: hidden;
+                        color: var(--heo-white);
+                        background-position: center
+                    }
+
+                    .customwidget2::after {
+                        box-shadow: 0 -69px 203px 11px #18684f inset;
+                        position: absolute;
+                        content: '';
+                        width: 100%;
+                        height: 100%;
+                        top: 0;
+                        left: 0;
+                    }
+
+                    #about-page .author-img:hover {
+                        transform: scale(1.1);
+                    }
+
+                    .author-img {
+                        transition: .3s;
+                        z-index: 102;
+                        box-shadow: 5px 5px 20px rgba(55, 55, 55, .3);
+                    }
+
+                    @media screen and (min-width: 1300px) {
+                        .author-content-item {
+                            animation: slide-in .6s 0s backwards;
+                        }
+                    }
+
+                    @keyframes slide-in {
+                        from {
+                            transform: translateY(20px);
+                            opacity: 0
+                        }
+
+                        to {
+                            transform: translateY(0);
+                            opacity: 1
+                        }
+                    }
+
+                    @keyframes slide-in-op {
+                        from {
+                            opacity: 0
+                        }
+
+                        to {
+                            opacity: 1
+                        }
+                    }
+
+                    .author-content-item.like-technology,
+                    .author-content-item.like-music {
+                        min-height: 400px;
+                    }
+
+                    #about-page .author-tag-left {
+                        margin-right: 20px;
+                    }
+
+                    #about-page .author-tag-right {
+                        margin-left: 20px;
+                    }
+
+                    #about-page .author-img img {
+                        border-radius: 200px;
+                        border: 10px solid rgba(176, 196, 222, .9);
+                    }
+                </style>
+                <!--
                 <div class="author-content">
                     <div class="author-content-item game-lol">
                         <div class="card-content">
@@ -508,102 +605,6 @@
                     </div>
                 </div>
                 <div class="author-content">
-                    <style>
-                        .customwidget1 {
-                            width: 39%;
-                            background: url(/img/DUCK!.webp) no-repeat top;
-                            background-size: cover;
-                            min-height: 300px;
-                            overflow: hidden;
-                            background-position: 50% 35%;
-                        }
-
-                        .customwidget1::after {
-                            box-shadow: 0 -69px 203px 11px #ffffff inset;
-                            position: absolute;
-                            content: '';
-                            width: 100%;
-                            height: 100%;
-                            top: 0;
-                            left: 0;
-                        }
-
-                        .customwidget2 {
-                            width: 59%;
-                            background: url(/img/terraria.webp) no-repeat top;
-                            background-size: cover;
-                            min-height: 300px;
-                            overflow: hidden;
-                            color: var(--heo-white);
-                            background-position: center
-                        }
-
-                        .customwidget2::after {
-                            box-shadow: 0 -69px 203px 11px #18684f inset;
-                            position: absolute;
-                            content: '';
-                            width: 100%;
-                            height: 100%;
-                            top: 0;
-                            left: 0;
-                        }
-
-                        #about-page .author-img:hover {
-                            transform: scale(1.1);
-                        }
-
-                        .author-img {
-                            transition: .3s;
-                            z-index: 102;
-                            box-shadow: 5px 5px 20px rgba(55, 55, 55, .3);
-                        }
-
-                        @media screen and (min-width: 1300px) {
-                            .author-content-item {
-                                animation: slide-in .6s 0s backwards;
-                            }
-                        }
-
-                        @keyframes slide-in {
-                            from {
-                                transform: translateY(20px);
-                                opacity: 0
-                            }
-
-                            to {
-                                transform: translateY(0);
-                                opacity: 1
-                            }
-                        }
-
-                        @keyframes slide-in-op {
-                            from {
-                                opacity: 0
-                            }
-
-                            to {
-                                opacity: 1
-                            }
-                        }
-
-                        .author-content-item.like-technology,
-                        .author-content-item.like-music {
-                            min-height: 400px;
-                        }
-
-                        #about-page .author-tag-left {
-                            margin-right: 20px;
-                        }
-
-                        #about-page .author-tag-right {
-                            margin-left: 20px;
-                        }
-
-                        #about-page .author-img img {
-                            border-radius: 200px;
-                            border: 10px solid rgba(176, 196, 222, .9);
-                        }
-                    </style>
                     <div class="author-content-item customwidget1">
                         <div class="card-content" style="writing-mode: vertical-rl;">
                             <span class="author-content-item-tips"
@@ -613,8 +614,8 @@
                             <span class="author-content-item-title"
                                 style="padding-left: 1em;text-shadow: 0px 0px 20px #ffffff;line-height: 1.1;">
                                 崩坏
-                                <!--<span
-                                    style="display: inline-block;position: relative;left: 4px;top: 4px;padding-left: 5px;">:</span>-->
+                                \<\!\-\-<span
+                                    style="display: inline-block;position: relative;left: 4px;top: 4px;padding-left: 5px;">:</span>\-\-\>
                                 <i class="fa-sharp fa-solid fa-colon fa-xs" style="vertical-align: baseline;"></i>
                                 <br>
                                 星穹铁道
@@ -636,7 +637,7 @@
                             </div>
                         </div>
                     </div>
-                </div>
+                </div>-->
                 <div class="author-content">
                     <div class="author-content-item like-technology"
                         style="background: url(/img/copyright_by_casecori.jpg) no-repeat;background-position: center">
@@ -716,7 +717,7 @@
                             </div>
                             <div>
                                 <span class="selfInfo-title">现在是</span>
-                                <span class="selfInfo-content" style="color: #b04fe6;">大学牲</span>
+                                <span class="selfInfo-content" style="color: #b04fe6;">大学生</span>
                             </div>
                         </div>
                     </div>
