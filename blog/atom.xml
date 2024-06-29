@@ -3,11 +3,11 @@
   <title>CasecoRI</title>
   <icon>https://www.gravatar.com/avatar/b501555fe4053c49ccea5f1be098f280</icon>
   
-  <link href="https://www.casecori.top/atom.xml" rel="self"/>
+  <link href="https://casecori.top/atom.xml" rel="self"/>
   
-  <link href="https://www.casecori.top/"/>
+  <link href="https://casecori.top/"/>
   <updated>2024-04-13T11:12:18.345Z</updated>
-  <id>https://www.casecori.top/</id>
+  <id>https://casecori.top/</id>
   
   <author>
     <name>CasecoRI</name>
@@ -18,8 +18,8 @@
   
   <entry>
     <title>计算当地白昼时长</title>
-    <link href="https://www.casecori.top/archives/e3b4.html"/>
-    <id>https://www.casecori.top/archives/e3b4.html</id>
+    <link href="https://casecori.top/archives/e3b4.html"/>
+    <id>https://casecori.top/archives/e3b4.html</id>
     <published>2024-03-17T16:00:00.000Z</published>
     <updated>2024-04-13T11:12:18.345Z</updated>
     
@@ -33,14 +33,14 @@
     
     
     
-    <category term="指北" scheme="https://www.casecori.top/categories/%E6%8C%87%E5%8C%97/"/>
+    <category term="指北" scheme="https://casecori.top/categories/%E6%8C%87%E5%8C%97/"/>
     
     
-    <category term="数学" scheme="https://www.casecori.top/tags/%E6%95%B0%E5%AD%A6/"/>
+    <category term="数学" scheme="https://casecori.top/tags/%E6%95%B0%E5%AD%A6/"/>
     
-    <category term="地理" scheme="https://www.casecori.top/tags/%E5%9C%B0%E7%90%86/"/>
+    <category term="地理" scheme="https://casecori.top/tags/%E5%9C%B0%E7%90%86/"/>
     
-    <category term="python" scheme="https://www.casecori.top/tags/python/"/>
+    <category term="python" scheme="https://casecori.top/tags/python/"/>
     
   </entry>
   
