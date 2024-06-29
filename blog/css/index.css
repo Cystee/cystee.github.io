@@ -595,8 +595,8 @@ i.material-icons.bf-share-icon {
 .site-name {
     transition: 0.3s;
     text-shadow: none;
-    font-family: ttf, Inconsolata, 'Noto Sans SC', 'Noto Serif SC', serif, sans-serif;
-    font-weight: normal !important;
+    font-family: serif !important;
+    font-weight: bold !important;
     font-size: x-large
 }
 
