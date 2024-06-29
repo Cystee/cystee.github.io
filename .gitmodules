@@ -1,0 +1,3 @@
+[submodule "hexo-new"]
+    path = hexo-new
+    url = https://github.com/Cystee/cystee.github.io/hexo-new.git
