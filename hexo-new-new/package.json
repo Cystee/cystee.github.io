@@ -1,0 +1,46 @@
+{
+  "name": "hexo",
+  "version": "0.0.1",
+  "private": true,
+  "hexo": {
+    "version": "6.3.0"
+  },
+  "dependencies": {
+    "@neilsustc/markdown-it-katex": "^1.0.0",
+    "butterfly-bber-swiper": "^1.0.0",
+    "hexo": "^6.3.0",
+    "hexo-abbrlink": "^2.2.1",
+    "hexo-butterfly-extjs": "^1.4.9",
+    "hexo-filter-nofollow": "^2.0.2",
+    "hexo-generator-archive": "^1.0.0",
+    "hexo-generator-baidu-sitemap": "^0.1.9",
+    "hexo-generator-category": "^1.0.0",
+    "hexo-generator-feed": "^3.0.0",
+    "hexo-generator-index": "^2.0.0",
+    "hexo-generator-search": "^2.4.3",
+    "hexo-generator-sitemap": "^2.2.0",
+    "hexo-generator-tag": "^1.0.0",
+    "hexo-renderer-ejs": "^1.0.0",
+    "hexo-renderer-markdown-it": "^6.0.1",
+    "hexo-renderer-pug": "^2.0.0",
+    "hexo-renderer-stylus": "^2.0.1",
+    "hexo-server": "^2.0.0",
+    "hexo-theme-butterfly": "^4.3.1",
+    "hexo-wordcount": "^6.0.1",
+    "html2canvas": "^1.4.1",
+    "markdown-it-attrs": "^4.1.6",
+    "markdown-it-checkbox": "^1.1.0",
+    "qrcodejs": "^1.0.0"
+  },
+  "scripts": {
+    "dev": "hexo clean && hexo generate && hexo server",
+    "build": "hexo generate",
+    "crispr": "webpack && hexo clean && hexo generate && hexo s --draft",
+    "draft": "hexo clean && hexo generate && hexo s --draft",
+    "pub": "hexo clean && hexo generate && git add . && git commit -m 'Updated.' && git push"
+  },
+  "devDependencies": {
+    "webpack": "^5.89.0",
+    "webpack-cli": "^5.1.4"
+  }
+}
