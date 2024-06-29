@@ -2,7 +2,7 @@
 <urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">
   
   <url>
-    <loc>https://casecori.top/archives/e3b4.html</loc>
+    <loc>https://cystee.github.io/archives/e3b4.html</loc>
     
     <lastmod>2024-04-13</lastmod>
     
@@ -11,7 +11,7 @@
   </url>
   
   <url>
-    <loc>https://casecori.top/tags/</loc>
+    <loc>https://cystee.github.io/tags/</loc>
     
     <lastmod>2023-06-28</lastmod>
     
@@ -20,7 +20,7 @@
   </url>
   
   <url>
-    <loc>https://casecori.top/pwa/manifest.json</loc>
+    <loc>https://cystee.github.io/pwa/manifest.json</loc>
     
     <lastmod>2023-06-28</lastmod>
     
@@ -29,7 +29,7 @@
   </url>
   
   <url>
-    <loc>https://casecori.top/categories/</loc>
+    <loc>https://cystee.github.io/categories/</loc>
     
     <lastmod>2023-06-28</lastmod>
     
@@ -39,7 +39,7 @@
   
 
   <url>
-    <loc>https://casecori.top/</loc>
+    <loc>https://cystee.github.io/</loc>
     <lastmod>2024-06-29</lastmod>
     <changefreq>daily</changefreq>
     <priority>1.0</priority>
@@ -47,21 +47,21 @@
 
   
   <url>
-    <loc>https://casecori.top/tags/%E6%95%B0%E5%AD%A6/</loc>
+    <loc>https://cystee.github.io/tags/%E6%95%B0%E5%AD%A6/</loc>
     <lastmod>2024-06-29</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.2</priority>
   </url>
   
   <url>
-    <loc>https://casecori.top/tags/%E5%9C%B0%E7%90%86/</loc>
+    <loc>https://cystee.github.io/tags/%E5%9C%B0%E7%90%86/</loc>
     <lastmod>2024-06-29</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.2</priority>
   </url>
   
   <url>
-    <loc>https://casecori.top/tags/python/</loc>
+    <loc>https://cystee.github.io/tags/python/</loc>
     <lastmod>2024-06-29</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.2</priority>
@@ -70,7 +70,7 @@
 
   
   <url>
-    <loc>https://casecori.top/categories/%E6%8C%87%E5%8C%97/</loc>
+    <loc>https://cystee.github.io/categories/%E6%8C%87%E5%8C%97/</loc>
     <lastmod>2024-06-29</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.2</priority>
