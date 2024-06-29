@@ -1,6 +1,6 @@
 User-agent: *
 Disallow: /blog/
-Disallow: /send/
+Disallow: /hexo-new/
 
 
 # ｀　ＣＣＣＣＣＣ
