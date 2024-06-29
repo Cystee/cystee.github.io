@@ -687,12 +687,6 @@ img {
     transition: 1s;
 }
 
-@font-face {
-    font-family: ttf;
-    font-display: swap;
-    src: url('/fonts/ttf.ttf');
-}
-
 #article-container pre,
 #article-container code {
     font-weight: 500;
