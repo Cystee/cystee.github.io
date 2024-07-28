@@ -372,8 +372,8 @@
 </head>
 
 <body>
-    <div id="main">你好，这里是网络站点 CasecoRI！<br>你可以尝试发现更多信息。<br>输入“help”获取帮助。<br>祝你愉快！<br><br><span
-            class="info">AxtonShell 2.0.0<br>Based on
+    <div id="main">你好，这里是网络站点 CasecoRI！<br>你可以尝试发现更多信息。<br>输入“help”获取帮助。<br>祝你愉快！<br><br><span class="info">AxtonShell
+            2.0.0<br>Based on
             BASH</span><br>
         <div class="content"><br></div>
         <div class="input-lable"><span class="prefix"><span>[</span><span id='usr'>usr</span><span>@casecori
@@ -384,7 +384,17 @@
                 id="ac-tip"></span><span class="catmode">&nbsp;</span>
             <div class="soft-keyboard-fill soft-keyboard"></div>
         </div>
-        <div class="soft-keyboard-self soft-keyboard"><div id="c-c" class="key">Ctrl-C</div><div class="lan-div"></div><div id="enter" class="key">Enter</div><div class="lan-div"></div><div id="tab" class="key">Tab</div><div class="lan-div"></div><div id="up" class="key">↑</div><div class="lan-div"></div><div id="down" class="key">↓</div></div>
+        <div class="soft-keyboard-self soft-keyboard">
+            <div id="c-c" class="key">Ctrl-C</div>
+            <div class="lan-div"></div>
+            <div id="enter" class="key">Enter</div>
+            <div class="lan-div"></div>
+            <div id="tab" class="key">Tab</div>
+            <div class="lan-div"></div>
+            <div id="up" class="key">↑</div>
+            <div class="lan-div"></div>
+            <div id="down" class="key">↓</div>
+        </div>
         <div class="con-lost">
             <div><span class="con-lost-text">Connection Lost</span><br><span class="retry">Enter to reconnect</div>
         </div>
@@ -590,7 +600,8 @@
                                 !colorMode &&
                                 !catMode &&
                                 !fcMode &&
-                                !lmMode
+                                !lmMode &&
+                                !jumpMode
                             ) {
                                 $("#ac-tip").text(acCommandList[i].substr(comNeeded.length));
                             }
@@ -612,7 +623,8 @@
                                 !colorMode &&
                                 !catMode &&
                                 !fcMode &&
-                                !lmMode
+                                !lmMode &&
+                                !jumpMode
                             ) {
                                 $("#ac-tip").text(asCommandList[i].substr(comNeeded.length));
                             }
@@ -645,7 +657,8 @@
                                 !colorMode &&
                                 !catMode &&
                                 !fcMode &&
-                                !lmMode
+                                !lmMode &&
+                                !jumpMode
                             ) {
                                 $("#ac-tip").text(asCommandList[i].substr(comNeeded.length));
                             }
@@ -690,7 +703,8 @@
                                         !colorMode &&
                                         !catMode &&
                                         !fcMode &&
-                                        !lmMode
+                                        !lmMode &&
+                                        !jumpMode
                                     ) {
                                         $("#ac-tip").text(
                                             fetchList[i]["name"].substr(acPathPrsed.length) + "/"
@@ -707,7 +721,8 @@
                                         !colorMode &&
                                         !catMode &&
                                         !fcMode &&
-                                        !lmMode
+                                        !lmMode &&
+                                        !jumpMode
                                     ) {
                                         $("#ac-tip").text(
                                             fetchList[i]["name"].substr(acPathPrsed.length)
@@ -729,7 +744,8 @@
                                         !colorMode &&
                                         !catMode &&
                                         !fcMode &&
-                                        !lmMode
+                                        !lmMode &&
+                                        !jumpMode
                                     ) {
                                         $("#ac-tip").text(
                                             fetchList[i]["comm_name"].substr(acPathPrsed.length) + "/"
@@ -748,7 +764,8 @@
                                         !colorMode &&
                                         !catMode &&
                                         !fcMode &&
-                                        !lmMode
+                                        !lmMode &&
+                                        !jumpMode
                                     ) {
                                         $("#ac-tip").text(
                                             fetchList[i]["comm_name"].substr(acPathPrsed.length)
@@ -789,7 +806,8 @@
                 conMode = 0,
                 con2Mode = 0,
                 running = 0,
-                lmMode = 0;
+                lmMode = 0,
+                jumpMode = 0;
             const files = [
                 {
                     name: "/",
@@ -920,7 +938,7 @@
                                     } else {
                                         if (fileObj["content"] === "--POSTLIST--") {
                                             res = res + renderedStr;
-                                        } else if (fileObj["content"] === "--MESSAGEMODE--"||fileObj["content"] === "--JUMPINGTO--") {
+                                        } else if (fileObj["content"] === "--MESSAGEMODE--" || fileObj["content"] === "--JUMPINGTO--") {
                                             return {
                                                 content:
                                                     "cat: " +
@@ -1906,6 +1924,17 @@
                     }
                 }
             }
+            function jumpf() {
+                setTimeout(() => {
+                    window.location.href = "/blog/";
+                }, 3000);
+                return "";
+            }
+            function jumpr() {
+                setTimeout(() => {
+                    $(".content").html($(".content").html() + "Done.<br>");
+                }, 2000);
+            }
             function sendMessage(message) {
                 if (
                     message.length > 5 &&
@@ -2031,6 +2060,16 @@
                     $(".prefix,.preblank").show();
                     $(".input-text").text("");
                     $("body,html").animate({ scrollTop: $(document).height() }, 0);
+                } else if (jumpMode) {
+                    $(".content").html($(".content").html());
+                    jumpMode = 0;
+                    if (commandRunning.length === 0) {
+                        running = 0;
+                        taggled = 1;
+                    }
+                    $(".prefix,.preblank").show();
+                    $(".input-text").text("");
+                    $("body,html").animate({ scrollTop: $(document).height() }, 0);
                 } else if (conMode) {
                     $(".content").html("<br>");
                     conMode = 0;
@@ -2081,7 +2120,8 @@
                         !skMode &&
                         !lmMode &&
                         !conMode &&
-                        !con2Mode
+                        !con2Mode &&
+                        !jumpMode
                     ) {
                         if (!taggled) {
                             $(".content").html(
@@ -2237,10 +2277,13 @@
                         $(".content").html(
                             $(".content").html() +
                             prefix +
-                            "Jumping to <a href='/blog/'>Web log</a>.<br>"
+                            "Jumping to <a href='/blog/'>Web log</a>."
                         );
                         $(".prefix,.preblank").hide();
-                        window.location.href = "/blog/"
+                        let restJump = jumpf();
+                        jumpr();
+                        $(".content").html($(".content").html() + "<br>" + restJump);
+                        jumpMode = 1;
                     }
                     else {
                         $(".content").html($(".content").html() + prefix + rest["content"]);
@@ -2259,7 +2302,8 @@
                     !skMode &&
                     !lmMode &&
                     !conMode &&
-                    !con2Mode
+                    !con2Mode &&
+                    !jumpMode
                 ) {
                     if (commandRunning.length === 0) {
                         running = 0;
@@ -2489,6 +2533,19 @@
                                 running = 0;
                             }
                             $(".preleave").hide();
+                            $(".prefix,.preblank").show();
+                            $(".input-text").text("");
+                            $("body,html").animate({ scrollTop: $(document).height() }, 0);
+                        } else if (jumpMode) {
+                            $(".content").html(
+                                $(".content").html() +
+                                deleteHtml($(".input-text").text()) +
+                                "^C<br>");
+                            jumpMode = 0;
+                            if (commandRunning.length === 0) {
+                                running = 0;
+                                taggled = 1;
+                            }
                             $(".prefix,.preblank").show();
                             $(".input-text").text("");
                             $("body,html").animate({ scrollTop: $(document).height() }, 0);
