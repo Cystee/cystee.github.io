@@ -812,6 +812,14 @@
                                             content:
                                                 '<a href="/blog/" target="_blank">Web log</a>.',
                                         },
+                                        {
+                                            name: "go_to.sh",
+                                            comm_name: "README.md",
+                                            sudo: false,
+                                            type: "file",
+                                            content:
+                                                '--JUMPINGTO--',
+                                        },
                                     ],
                                 },
                                 {
@@ -2219,7 +2227,17 @@
                         $(".prefix,.preblank").hide();
                         $(".preleave").show();
                         lmMode = 1;
-                    } else {
+                    }
+                    else if (rest["content"] === "--JUMPINGTO--") {
+                        $(".content").html(
+                            $(".content").html() +
+                            prefix +
+                            "Jumping to <a href='/blog/'>Web log</a>.<br>"
+                        );
+                        $(".prefix,.preblank").hide();
+                        window.location.href = "/blog/"
+                    }
+                    else {
                         $(".content").html($(".content").html() + prefix + rest["content"]);
                     }
                 } else {
