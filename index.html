@@ -764,15 +764,20 @@
                 }
             }
             const logo =
-                "｀　ＣＣＣＣＣＣ<br>" +
-                "ＣＣ　　　　　　ＣＣ<br>" +
-                "ＣＣ　　　　　　ＣＣ<br>" +
-                "ＣＣ<br>" +
-                "ＣＣ<br>" +
-                "ＣＣ<br>" +
-                "ＣＣ　　　　　　ＣＣ<br>" +
-                "ＣＣ　　　　　　ＣＣ<br>" +
-                "　　ＣＣＣＣＣＣ";
+                "            @@@OOOO,           <br>" +
+                "       @@@@@@@OOO/[.,[OOO,     <br>" +
+                "  ,@@@@@@OOOOO`   .   =OO@@,   <br>" +
+                " ,@@@@@@@@OO`  ,OOOO   OOO@@@, <br>" +
+                ",O@@@@OOOO/  ,OOOOOO   OOO@@@@,<br>" +
+                "O@@@@OOOO`  =OOOOOO[  ,OO@@@@OO<br>" +
+                "@@@@@OOO.             =OO@@@@OO<br>" +
+                "@@@@@OO   OOO]]OOOO   OOO@@@@OO<br>" +
+                "O@@@@O   /OOO@@@@O^  =OOO@@@@OO<br>" +
+                " @@@@^  =@OOO@@@@/  ,OO@O@@@@O <br>" +
+                " ,@@@  ^@O@@@@OOO   OO@@@@OOO, <br>" +
+                "  ,@@@O]/O@@@@OOOO]]OO@@@@OO,  <br>" +
+                "      ,OOO@@@@@@@@@@@@OOO,     <br>" +
+                "           @@@OOOO,            ";
             let rootMode = 0,
                 sudoMode = 0,
                 historyMode = 0,
@@ -915,7 +920,7 @@
                                     } else {
                                         if (fileObj["content"] === "--POSTLIST--") {
                                             res = res + renderedStr;
-                                        } else if (fileObj["content"] === "--MESSAGEMODE--") {
+                                        } else if (fileObj["content"] === "--MESSAGEMODE--"||fileObj["content"] === "--JUMPINGTO--") {
                                             return {
                                                 content:
                                                     "cat: " +
