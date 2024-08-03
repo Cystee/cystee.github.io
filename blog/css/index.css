@@ -678,7 +678,16 @@ img {
     color: var(--card-bg);
 }
 
+[data-theme='dark'] .read-mode .latent-character {
+    color: var(--global-bg);
+}
+
 .latent-character:hover {
+    color: var(--font-color);
+    transition: 1s;
+}
+
+[data-theme='dark'] .read-mode .latent-character:hover {
     color: var(--font-color);
     transition: 1s;
 }
