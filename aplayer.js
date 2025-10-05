@@ -133,13 +133,6 @@ const music = [
         lrc: '/music/default.lrc'
     },
     {
-        name: '群青',
-        artist: 'YOASOBI',
-        url: '/music/Voice/YOASOBI - 群青.flac',
-        cover: '/music/default.jpg',
-        lrc: '/music/Voice/YOASOBI - 群青.lrc'
-    },
-    {
         name: 'PLANET',
         artist: 'ラムジ',
         url: '/music/Voice/ラムジ - PLANET.flac',
