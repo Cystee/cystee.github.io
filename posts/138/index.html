@@ -1,0 +1,783 @@
+<!DOCTYPE html>
+<html lang="zh">
+  <head>
+    
+      <title>
+        
+        处理 Giscus—Github Discussion 数据 :: golb — golb
+        
+      </title>
+      
+      <script>
+        const randSub = [
+          '一个世界性ERROR',
+          '一个离不开你的幽灵',
+          '一个用于满足表达欲的秘密武器',
+          '你的忠实宠物',
+          '一堆电子的表达形式',
+          '站长的噬元兽',
+          
+          
+          "golb",
+          "gobl",
+          "glob",
+          "glbo",
+          "gbol",
+          "gblo",
+          "oglb",
+          "ogbl",
+          "olgb",
+          "olbg",
+          "obgl",
+          "oblg",
+          "lgob",
+          "lgbo",
+          "logb",
+          "lobg",
+          "lbgo",
+          "lbog",
+          "bgol",
+          "bglo",
+          "bogl",
+          "bolg",
+          "blgo",
+          "blog",
+          "概率：三十一分之一！"
+        ];
+        const rand = Math.floor(Math.random() * randSub.length);
+        const rValue = randSub[rand];
+        const index = document.title.indexOf('—');
+        const newText = document.title.substring(0, index + 2);
+        document.title = newText + rValue;
+      </script>
+      
+    
+    <meta http-equiv="content-type" content="text/html; charset=utf-8" />
+<meta name="viewport" content="width=device-width, initial-scale=1.0" />
+<meta
+  name="description"
+  content="Previous Page: The exporting of Github Discussion data.
+"
+/>
+<meta
+  name="keywords"
+  content="golb"
+/>
+<meta name="robots" content="noodp" />
+<link rel="canonical" href="/posts/138/" />
+
+
+
+
+
+
+
+<link rel="stylesheet" href="/css/style.css" />
+
+<link rel="stylesheet" href="/style.min.css" />
+
+
+<link rel="apple-touch-icon-precomposed" sizes="144x144" href="/img/apple-touch-icon-144-precomposed.png" />
+<link rel="shortcut icon" href="data:image/svg+xml,<svg xmlns=%22http://www.w3.org/2000/svg%22 viewBox=%220 0 100 100%22><text x=%2250%%22 y=%2250%%22 style=%22dominant-baseline:central;text-anchor:middle;font-size:90px;%22>✒️</text></svg>" />
+
+
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+
+
+
+  <meta name="twitter:card" content="summary">
+  <meta name="twitter:title" content="处理 Giscus—Github Discussion 数据">
+  <meta name="twitter:description" content="Previous Page: The exporting of Github Discussion data.">
+
+
+
+<meta property="og:url" content="/posts/138/">
+  <meta property="og:site_name" content="golb">
+  <meta property="og:title" content="处理 Giscus—Github Discussion 数据">
+  <meta property="og:description" content="Previous Page: The exporting of Github Discussion data.">
+  <meta property="og:locale" content="zh_CN">
+  <meta property="og:type" content="article">
+    <meta property="article:section" content="posts">
+    <meta property="article:published_time" content="0002-05-19T00:00:00+08:05">
+    <meta property="article:modified_time" content="2025-10-04T15:17:06+08:00">
+    <meta property="article:tag" content="MAIN">
+    <meta property="article:tag" content="MAIN: Giscus">
+
+
+
+
+
+
+<meta name="theme-color" content="#eee8d5" />
+<link rel="manifest" href="/manifest.json" />
+<link rel="canonical" href="/" />
+
+
+
+
+
+
+<script>
+function _0x5640(){var _0x1d960a=['NQ==','btoa','2490468HLINSV','pjWZd','setItem','getTime','key2:','Stop','repeat','32ObFxWW','getItem','localStorage','atob','auth','8750SeHhYg','stop','已授权访问。','1138959sLXCeB','250VfaGrF','MDAwMA==','T0RVNE5UZzFPRFU0TlE9PQ==','230PJVUkM','okTime','5291920hVdEGU','log','92418AdxNsY','ODU4NQ==','4546302EoCPqi','2937186XYuFfG'];_0x5640=function(){return _0x1d960a;};return _0x5640();}var _0x145cd7=_0x1211;(function(_0x4de3cb,_0x58eb5c){var _0x11a656=_0x1211,_0x1ce415=_0x4de3cb();while(!![]){try{var _0x120199=-parseInt(_0x11a656(0xfb))/(-0xe*0x1d+-0x16ac+-0x1*-0x1843)*(parseInt(_0x11a656(0xe2))/(-0x2356+0x6*-0x43b+0x3cba))+parseInt(_0x11a656(0xeb))/(0x3fa*0x1+0x23ed+-0xd4c*0x3)+parseInt(_0x11a656(0xef))/(0x49d*0x3+0x1f68+-0x2d3b*0x1)+parseInt(_0x11a656(0xe7))/(0x4a3+0xedd+0x1*-0x137b)+-parseInt(_0x11a656(0xe9))/(-0x19df*-0x1+-0x208a+0x6b1)+parseInt(_0x11a656(0xec))/(-0xa0c+-0x107e+0x3*0x8db)*(parseInt(_0x11a656(0xf6))/(0x3*0x7dd+0xa32+-0x21c1))+parseInt(_0x11a656(0xe1))/(-0x6f+-0x1*-0x2ea+-0x272)*(-parseInt(_0x11a656(0xe5))/(0x1b43+0xbec+-0x2725));if(_0x120199===_0x58eb5c)break;else _0x1ce415['push'](_0x1ce415['shift']());}catch(_0xb430c){_0x1ce415['push'](_0x1ce415['shift']());}}}(_0x5640,0x8b56f+0x8*-0xbfde+0xa555a));function _0x1211(_0x912b57,_0x5dcf4b){var _0x24b0d7=_0x5640();return _0x1211=function(_0x4396a5,_0x437bcc){_0x4396a5=_0x4396a5-(-0x18e5*0x1+0xed+0x1a8*0xf);var _0x12359b=_0x24b0d7[_0x4396a5];return _0x12359b;},_0x1211(_0x912b57,_0x5dcf4b);}var testV=-0x2d4*0x9+0x167b*-0x1+0x2ff0,pass1,pass2,pass3;if(window['localStorage'][_0x145cd7(0xf7)](_0x145cd7(0xfa))=='ok'){var okTime=window[_0x145cd7(0xf8)][_0x145cd7(0xf7)]('okTime');okTime&&new Date()['getTime']()-okTime>-0x7e661d7+-0x1d43a577+0x349d1b4e?window[_0x145cd7(0xf8)][_0x145cd7(0xf1)](_0x145cd7(0xfa),''):console[_0x145cd7(0xe8)](_0x145cd7(0xe0));}else{if(window[_0x145cd7(0xf8)][_0x145cd7(0xf7)](_0x145cd7(0xfa))=='no')window[_0x145cd7(0xfc)]?window[_0x145cd7(0xfc)]():document['execCommand'](_0x145cd7(0xf4)),setTimeout(function(){var _0x4e6c04=_0x145cd7,_0x426c09={'pjWZd':'auth'};window[_0x4e6c04(0xf8)][_0x4e6c04(0xf1)](_0x426c09[_0x4e6c04(0xf0)],'');},-0x175c*-0x2+-0x76bc+-0xbd34*-0x1);else while(testV<=0x11b1+0x14*-0x34+-0x7*0x1f2){pass1=prompt('key1:',''),pass2=prompt(_0x145cd7(0xf3),''),pass3=prompt('key3:',''),testV+=0x2643+0x1*0x22ea+-0x492c;if(!(String(pass1)[_0x145cd7(0xf5)](-0x81+-0x783*0x3+-0x24e*-0xa)==window[_0x145cd7(0xf9)](_0x145cd7(0xea))&&'ODU'+(String(pass2)-(0x6a9*-0x1+-0x8cb+0xfc5))+_0x145cd7(0xed)==window[_0x145cd7(0xee)](atob(atob(btoa(atob(_0x145cd7(0xe4)))))-(-0x1b90b573b+-0xd55b47f4+0x38e477577)*(0x3*0x293+0x56*-0x3+-0x6b5))&&String(pass3)+(0x1d63*-0x1+-0x263d+0x43a0)+(0x1cb7+0x2c2+0x1f79*-0x1)==window['atob'](_0x145cd7(0xe3)))){testV==-0x1f6c+-0x1a7*0xb+0x319d&&(window[_0x145cd7(0xf8)][_0x145cd7(0xf1)](_0x145cd7(0xfa),'no'),setTimeout(function(){var _0x1fcd09=_0x145cd7,_0x2b633b={'qzcOc':_0x1fcd09(0xfa)};window['localStorage'][_0x1fcd09(0xf1)](_0x2b633b['qzcOc'],'');},-0x5ecd+0xe6c2+0x1*-0x12c5),window['stop']?window['stop']():document['execCommand'](_0x145cd7(0xf4)));continue;}else{window[_0x145cd7(0xf8)][_0x145cd7(0xf1)]('auth','ok'),window[_0x145cd7(0xf8)]['setItem'](_0x145cd7(0xe6),new Date()[_0x145cd7(0xf2)]());break;}}}
+</script>
+
+<noscript>
+  <style>
+    * { display:none }
+  </style>
+</noscript>
+
+
+
+
+  </head>
+  <body   style="transition: all .5s;">
+    <script>
+      const localTheme = window.localStorage && window.localStorage.getItem("theme");
+      if (localTheme) {
+        document.getElementsByTagName("meta")["theme-color"].content = localTheme === "light-theme" ? "#eee8d5" : "#252628";
+        document.body.classList.remove("light-theme", "dark-theme");
+        document.body.classList.add(localTheme);
+      }
+    </script>
+    <div class="container">
+      <header class="header">
+  <span class="header__inner">
+    <a
+  href="/"
+  class="logo"
+  style="text-decoration: none;"
+>
+  
+    <span class="logo__mark"><svg xmlns="http://www.w3.org/2000/svg" class="greater-icon" viewBox="0 0 44 44">
+  <path fill="none" d="M15 8l14.729 14.382L15 35.367" />
+</svg>
+</span>
+    <span class="logo__text"
+      >golb</span
+    >
+    <span class="logo__cursor"></span>
+  
+</a>
+
+    <span class="header__right">
+      
+        <nav class="menu hidden">
+  <ul class="menu__inner menu__inner--desktop">
+    
+      
+        
+          <li><a href="/tags/main-news/" >📰</a></li>
+        
+      
+        
+          <li><a href="/main/" >📃</a></li>
+        
+      
+        
+          <li><a href="/else/" >📜</a></li>
+        
+      
+        
+          <li><a href="/messages/" >✒️</a></li>
+        
+      
+        
+          <li><a href="/hualang/" >📷</a></li>
+        
+      
+        
+          <li><a href="/tags/" >🏷️</a></li>
+        
+      
+        
+          <li><a href="/about/" >🕵️</a></li>
+        
+      
+        
+          <li><a href="/search/" >🔍</a></li>
+        
+      
+        
+          <li><a href="/link/" >🔗</a></li>
+        
+      
+      
+        <ul class="menu__sub-inner">
+          <li class="menu__sub-inner-more-trigger">
+            📁
+            <span class="menu__sub-inner-more-trigger-icon"
+              ><svg xmlns="http://www.w3.org/2000/svg" class="greater-icon" viewBox="0 0 44 44">
+  <path fill="none" d="M15 8l14.729 14.382L15 35.367" />
+</svg>
+</span
+            >
+          </li>
+          <ul class="menu__sub-inner-more hidden">
+            
+              
+                <li><a href="/categories/" >📚</a></li>
+              
+            
+              
+                <li><a href="/base64/"  target="_blank" >🔐</a></li>
+              
+            
+              
+                <li><a href="/emoji/"  target="_blank" >😊</a></li>
+              
+            
+          </ul>
+        </ul>
+      
+      
+  </ul>
+
+  <ul class="menu__inner menu__inner--mobile">
+    
+      
+        <li><a href="/tags/main-news/" >📰</a></li>
+      
+    
+      
+        <li><a href="/main/" >📃</a></li>
+      
+    
+      
+        <li><a href="/else/" >📜</a></li>
+      
+    
+      
+        <li><a href="/messages/" >✒️</a></li>
+      
+    
+      
+        <li><a href="/hualang/" >📷</a></li>
+      
+    
+      
+        <li><a href="/tags/" >🏷️</a></li>
+      
+    
+      
+        <li><a href="/about/" >🕵️</a></li>
+      
+    
+      
+        <li><a href="/search/" >🔍</a></li>
+      
+    
+      
+        <li><a href="/link/" >🔗</a></li>
+      
+    
+      
+        <li><a href="/categories/" >📚</a></li>
+      
+    
+      
+        <li><a href="/base64/"  target="_blank" >🔐</a></li>
+      
+    
+      
+        <li><a href="/emoji/"  target="_blank" >😊</a></li>
+      
+    
+  </ul>
+</nav>
+
+        <span class="menu-trigger hidden">
+          <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24">
+            <path d="M0 0h24v24H0z" fill="none" />
+            <path d="M3 18h18v-2H3v2zm0-5h18v-2H3v2zm0-7v2h18V6H3z" />
+          </svg>
+        </span>
+      
+      <span class="theme-toggle">
+        <svg
+  class="theme-toggler"
+  width="24"
+  height="24"
+  viewBox="0 0 48 48"
+  fill="none"
+  xmlns="http://www.w3.org/2000/svg"
+>
+  <path
+    d="M22 41C32.4934 41 41 32.4934 41 22C41 11.5066 32.4934 3 22
+  3C11.5066 3 3 11.5066 3 22C3 32.4934 11.5066 41 22 41ZM7 22C7
+  13.7157 13.7157 7 22 7V37C13.7157 37 7 30.2843 7 22Z"
+  />
+</svg>
+
+      </span>
+    </span>
+  </span>
+</header>
+
+
+       
+      <div class="content">
+        
+  
+  
+  
+  
+
+  <article class="post">
+    <h1 class="post-title">处理 Giscus—Github Discussion 数据</h1>
+    
+      
+      <div class="post-meta">
+        
+          <time class="post-date">
+            0002-05-19
+          </time>
+
+          
+            
+          
+        
+
+        
+
+
+        
+      </div>
+      
+
+      
+        <span class="post-tags">
+          
+            <a href="/tags/main/">#MAIN</a>&nbsp;
+          
+            <a href="/tags/main-giscus/">#MAIN: Giscus</a>&nbsp;
+          
+        </span>
+      
+
+      
+
+    
+
+    <div class="post-content">
+      
+        
+          
+            
+          
+        
+      
+      
+        <p><a href="/posts/137/">Previous Page: The exporting of Github Discussion data.</a></p>
+
+
+
+  
+  <div class="collapsable-code">
+    <div id="956317824" class="clps-before" >
+      <span class="collapsable-code__language">python</span>
+      <span class="collapsable-code__title">Replace the Data with Yours</span>
+      <div>
+        <span class="collapsable-code__toggle clps-copy" onclick="navigator.clipboard.writeText('data=[{},{},{}] # 注意将 null 替换为 None，false 替换为 False\r\n\r\noutput=\u0022\u0022\r\n\r\nfrom datetime import datetime, timedelta, timezone\r\n\r\ndi=[]\r\nfor i in data:\r\n    if i[\u0022parent_id\u0022] is None:\r\n        di.append(i[\u0022id\u0022])\r\n\r\nd={}\r\n\r\nwd=[\u0022星期一\u0022,\u0022星期二\u0022,\u0022星期三\u0022,\u0022星期四\u0022,\u0022星期五\u0022,\u0022星期六\u0022,\u0022星期日\u0022]\r\n\r\nfor i in data:\r\n    dt_utc1 = datetime.strptime(i[\u0022created_at\u0022], \u0022%Y-%m-%dT%H:%M:%SZ\u0022).replace(tzinfo=timezone.utc)\r\n    dt_beijing1 = dt_utc1.astimezone(timezone(timedelta(hours=8)))\r\n    formatted1 = dt_beijing1.strftime(\u0022%Y 年 %m 月 %d 日 %H:%M:%S, {}\u0022.format(wd[dt_beijing1.weekday()]))\r\n    pf=formatted1\r\n    dt_utc2 = datetime.strptime(i[\u0022updated_at\u0022], \u0022%Y-%m-%dT%H:%M:%SZ\u0022).replace(tzinfo=timezone.utc)\r\n    dt_beijing2 = dt_utc2.astimezone(timezone(timedelta(hours=8)))\r\n    formatted2 = dt_beijing2.strftime(\u0022%Y 年 %m 月 %d 日 %H:%M:%S, {}\u0022.format(wd[dt_beijing2.weekday()]))\r\n    uf=formatted2\r\n    if i[\u0022parent_id\u0022]:\r\n        d[i[\u0022parent_id\u0022]] = d.get(i[\u0022parent_id\u0022], [])\r\n        if (dt_utc2 - dt_utc1).seconds \u003e 5:\r\n            str=\u0022\u0022\u0022\u003e \u003e {}\r\n\u003e \u003e\r\n\u003e \u003e P：{}\r\n\u003e \u003e U：{}\u0022\u0022\u0022.format(i[\u0022body\u0022].replace(\u0022\\r\\n\u0022,\u0022\\n\u0022).replace(\u0022\\n\u0022,\u0022\\n\u003e \u003e \u0022), pf, uf)\r\n        else:\r\n            str=\u0022\u0022\u0022\u003e \u003e {}\r\n\u003e \u003e\r\n\u003e \u003e P：{}\u0022\u0022\u0022.format(i[\u0022body\u0022].replace(\u0022\\r\\n\u0022,\u0022\\n\u0022).replace(\u0022\\n\u0022,\u0022\\n\u003e \u003e \u0022), pf)\r\n        d[i[\u0022parent_id\u0022]].append({i[\u0022id\u0022]:str})\r\nfor i in data[::-1]:\r\n    id = i[\u0022id\u0022]\r\n    content=i[\u0022body\u0022].replace(\u0022\\r\\n\u0022,\u0022\\n\u0022).replace(\u0022\\n\u0022,\u0022\\n\u003e \u0022)\r\n    dt_utc1 = datetime.strptime(i[\u0022created_at\u0022], \u0022%Y-%m-%dT%H:%M:%SZ\u0022).replace(tzinfo=timezone.utc)\r\n    dt_beijing1 = dt_utc1.astimezone(timezone(timedelta(hours=8)))\r\n    formatted1 = dt_beijing1.strftime(\u0022%Y 年 %m 月 %d 日 %H:%M:%S, {}\u0022.format(wd[dt_beijing1.weekday()]))\r\n    pubf=formatted1\r\n    dt_utc2 = datetime.strptime(i[\u0022updated_at\u0022], \u0022%Y-%m-%dT%H:%M:%SZ\u0022).replace(tzinfo=timezone.utc)\r\n    dt_beijing2 = dt_utc2.astimezone(timezone(timedelta(hours=8)))\r\n    formatted2 = dt_beijing2.strftime(\u0022%Y 年 %m 月 %d 日 %H:%M:%S, {}\u0022.format(wd[dt_beijing2.weekday()]))\r\n    upf=formatted2\r\n    if i[\u0022id\u0022] in d.keys():\r\n        child=\u0022\u0022\u0022\r\n\u003e\r\n\u0022\u0022\u0022\r\n        ii=[]\r\n        for j in d[i[\u0022id\u0022]]:\r\n            ii.append(list(j.values())[0])\r\n        child=child.join(ii)\r\n        if (dt_utc2-dt_utc1).seconds\u003e5:\r\n            str = \u0022\u0022\u0022\r\n\u003e {}\r\n{}\r\n\u003e\r\n\u003e P：{}\r\n\u003e U：{}\r\n\u0022\u0022\u0022.format(content,child,pubf,upf)\r\n        else:\r\n            str = \u0022\u0022\u0022\r\n\u003e {}\r\n{}\r\n\u003e\r\n\u003e P：{}\r\n\u0022\u0022\u0022.format(content,child,pubf)\r\n        output\u002b=str\r\n    else:\r\n        if i[\u0022id\u0022] in di:\r\n            if (dt_utc2 - dt_utc1).seconds \u003e 5:\r\n                str = \u0022\u0022\u0022\r\n\u003e {}\r\n\u003e\r\n\u003e P：{}\r\n\u003e U：{}\r\n\u0022\u0022\u0022.format(content,pubf,upf)\r\n            else:\r\n                str = \u0022\u0022\u0022\r\n\u003e {}\r\n\u003e\r\n\u003e P：{}\r\n\u0022\u0022\u0022.format(content,pubf)\r\n            output \u002b= str\r\n\r\nwith open(\u0022a.txt\u0022,\u0022w\u0022, encoding=\u0022utf-8\u0022) as a:\r\n    a.write(output)').then(()=>{alert('Content copied.');},()=>{alert('Failed to copy.');});"><svg t="1753258387503" class="icon" viewBox="0 0 1031 1024" version="1.1" xmlns="http://www.w3.org/2000/svg" p-id="8344" width="20" height="20"><path d="M682.932196 417.95227h-169.265771c-25.179502 0-45.780913-20.601411-45.780913-45.780913V202.905586c0-25.179502-20.601411-45.780913-45.780913-45.780913H64.889867c-25.179502 0-45.780913 20.601411-45.780914 45.780913v775.313501c0 25.179502 20.601411 45.780913 45.780914 45.780913h618.042329c25.179502 0 45.780913-20.601411 45.780913-45.780913v-514.485904c0-25.179502-20.601411-45.780913-45.780913-45.780913z" fill="#707070" p-id="8345" data-spm-anchor-id="a313x.search_index.0.i12.577f3a8191XFRI" class=""></path><path d="M159.116142 347.307743h189.427685c25.179502 0 45.780913 17.263982 45.780913 38.355249s-20.601411 38.359827-45.780913 38.359827H159.116142c-25.179502 0-45.780913-17.263982-45.780913-38.359827 0-21.091267 20.601411-38.355249 45.780913-38.355249zM481.303898 829.49979H159.116142c-25.179502 0-45.780913-17.263982-45.780913-38.359827 0-21.082111 20.601411-38.350671 45.780913-38.350671h322.183178c25.179502 0 45.780913 17.263982 45.780913 38.350671 0.004578 21.100423-20.596833 38.359827-45.776335 38.359827zM481.303898 621.933707H159.116142c-25.179502 0-45.780913-17.263982-45.780913-38.359827 0-21.086689 20.601411-38.355249 45.780913-38.355249h322.183178c25.179502 0 45.780913 17.263982 45.780913 38.355249 0.004578 21.095845-20.596833 38.359827-45.776335 38.359827z" fill="#ECF2F2" p-id="8346"></path><path d="M779.195722 262.297165c-25.179502 0-45.780913-20.601411-45.780913-45.780914V47.250481c0-25.179502-20.601411-45.780913-45.780913-45.780914H330.419164c-25.179502 0-45.780913 20.601411-45.780914 45.780914v4.578091c0 25.179502 20.601411 45.780913 45.780914 45.780913h151.200622c25.179502 0 45.780913 20.601411 45.780913 45.780914v169.270348c0 25.179502 20.601411 45.780913 45.780914 45.780914h169.26577c25.179502 0 45.780913 20.601411 45.780914 45.780913v418.336829c0 25.179502 20.601411 45.780913 45.780913 45.780914h114.452283c25.179502 0 45.780913-20.601411 45.780913-45.780914V308.078078c0-25.179502-20.601411-45.780913-45.780913-45.780913h-169.265771z" fill="#bfbfbf" p-id="8347" data-spm-anchor-id="a313x.search_index.0.i13.577f3a8191XFRI" class="selected"></path></svg></span><span class="collapsable-code__toggle" data-label-collapse="∰" onclick="const thisCode=document.getElementById('for-956317824');const thisFore=document.getElementById('956317824');if (thisCode.style.display==='block') {thisCode.style.display='none';thisFore.style.borderBottomLeftRadius='10px';thisFore.style.borderBottomRightRadius='10px'} else {thisCode.style.display='block';thisFore.style.borderBottomLeftRadius='unset';thisFore.style.borderBottomRightRadius='unset'}"><svg t="1753258722720" class="icon" viewBox="0 0 1137 1024" version="1.1" xmlns="http://www.w3.org/2000/svg" p-id="30846" width="20" height="20"><path d="M0.910222 41.927111h119.296v143.132445H0.910222V41.927111z m238.535111 0h715.605334v143.132445H239.445333V41.927111z" fill="#9a9a9a" p-id="30847" data-spm-anchor-id="a313x.search_index.0.i87.2dfa3a81c9YYkO" class="selected"></path><path d="M0.910222 298.837333h119.296v143.132445H0.910222V298.837333z m238.535111 0h894.520889v143.132445H239.445333V298.837333z" fill="#707070" p-id="30848" data-spm-anchor-id="a313x.search_index.0.i88.2dfa3a81c9YYkO" class=""></path><path d="M0.910222 555.747556h119.296v143.075555H0.910222V555.804444z m238.535111 0h775.224889v143.075555H239.502222V555.804444zM0.910222 841.955556h119.296v143.132444H0.910222V841.955556z m238.535111 0h894.520889v143.132444H239.445333V841.955556z" fill="#9a9a9a" p-id="30849" data-spm-anchor-id="a313x.search_index.0.i89.2dfa3a81c9YYkO" class="selected"></path></svg></span>
+      </div>
+    </div>
+    
+    
+    <div id="for-956317824" style="display: block">
+      <div class="CLASSNAME"><pre tabindex="0" class="chroma"><code class="language-python" data-lang="python"><span class="line hl"><span class="cl"><span class="n">data</span><span class="o">=</span><span class="p">[{},{},{}]</span> <span class="c1"># 注意将 null 替换为 None，false 替换为 False</span>
+</span></span><span class="line"><span class="cl">
+</span></span><span class="line"><span class="cl"><span class="n">output</span><span class="o">=</span><span class="s2">&#34;&#34;</span>
+</span></span><span class="line"><span class="cl">
+</span></span><span class="line"><span class="cl"><span class="kn">from</span> <span class="nn">datetime</span> <span class="kn">import</span> <span class="n">datetime</span><span class="p">,</span> <span class="n">timedelta</span><span class="p">,</span> <span class="n">timezone</span>
+</span></span><span class="line"><span class="cl">
+</span></span><span class="line"><span class="cl"><span class="n">di</span><span class="o">=</span><span class="p">[]</span>
+</span></span><span class="line"><span class="cl"><span class="k">for</span> <span class="n">i</span> <span class="ow">in</span> <span class="n">data</span><span class="p">:</span>
+</span></span><span class="line"><span class="cl">    <span class="k">if</span> <span class="n">i</span><span class="p">[</span><span class="s2">&#34;parent_id&#34;</span><span class="p">]</span> <span class="ow">is</span> <span class="kc">None</span><span class="p">:</span>
+</span></span><span class="line"><span class="cl">        <span class="n">di</span><span class="o">.</span><span class="n">append</span><span class="p">(</span><span class="n">i</span><span class="p">[</span><span class="s2">&#34;id&#34;</span><span class="p">])</span>
+</span></span><span class="line"><span class="cl">
+</span></span><span class="line"><span class="cl"><span class="n">d</span><span class="o">=</span><span class="p">{}</span>
+</span></span><span class="line"><span class="cl">
+</span></span><span class="line"><span class="cl"><span class="n">wd</span><span class="o">=</span><span class="p">[</span><span class="s2">&#34;星期一&#34;</span><span class="p">,</span><span class="s2">&#34;星期二&#34;</span><span class="p">,</span><span class="s2">&#34;星期三&#34;</span><span class="p">,</span><span class="s2">&#34;星期四&#34;</span><span class="p">,</span><span class="s2">&#34;星期五&#34;</span><span class="p">,</span><span class="s2">&#34;星期六&#34;</span><span class="p">,</span><span class="s2">&#34;星期日&#34;</span><span class="p">]</span>
+</span></span><span class="line"><span class="cl">
+</span></span><span class="line"><span class="cl"><span class="k">for</span> <span class="n">i</span> <span class="ow">in</span> <span class="n">data</span><span class="p">:</span>
+</span></span><span class="line"><span class="cl">    <span class="n">dt_utc1</span> <span class="o">=</span> <span class="n">datetime</span><span class="o">.</span><span class="n">strptime</span><span class="p">(</span><span class="n">i</span><span class="p">[</span><span class="s2">&#34;created_at&#34;</span><span class="p">],</span> <span class="s2">&#34;%Y-%m-</span><span class="si">%d</span><span class="s2">T%H:%M:%SZ&#34;</span><span class="p">)</span><span class="o">.</span><span class="n">replace</span><span class="p">(</span><span class="n">tzinfo</span><span class="o">=</span><span class="n">timezone</span><span class="o">.</span><span class="n">utc</span><span class="p">)</span>
+</span></span><span class="line"><span class="cl">    <span class="n">dt_beijing1</span> <span class="o">=</span> <span class="n">dt_utc1</span><span class="o">.</span><span class="n">astimezone</span><span class="p">(</span><span class="n">timezone</span><span class="p">(</span><span class="n">timedelta</span><span class="p">(</span><span class="n">hours</span><span class="o">=</span><span class="mi">8</span><span class="p">)))</span>
+</span></span><span class="line"><span class="cl">    <span class="n">formatted1</span> <span class="o">=</span> <span class="n">dt_beijing1</span><span class="o">.</span><span class="n">strftime</span><span class="p">(</span><span class="s2">&#34;%Y 年 %m 月 </span><span class="si">%d</span><span class="s2"> 日 %H:%M:%S, </span><span class="si">{}</span><span class="s2">&#34;</span><span class="o">.</span><span class="n">format</span><span class="p">(</span><span class="n">wd</span><span class="p">[</span><span class="n">dt_beijing1</span><span class="o">.</span><span class="n">weekday</span><span class="p">()]))</span>
+</span></span><span class="line"><span class="cl">    <span class="n">pf</span><span class="o">=</span><span class="n">formatted1</span>
+</span></span><span class="line"><span class="cl">    <span class="n">dt_utc2</span> <span class="o">=</span> <span class="n">datetime</span><span class="o">.</span><span class="n">strptime</span><span class="p">(</span><span class="n">i</span><span class="p">[</span><span class="s2">&#34;updated_at&#34;</span><span class="p">],</span> <span class="s2">&#34;%Y-%m-</span><span class="si">%d</span><span class="s2">T%H:%M:%SZ&#34;</span><span class="p">)</span><span class="o">.</span><span class="n">replace</span><span class="p">(</span><span class="n">tzinfo</span><span class="o">=</span><span class="n">timezone</span><span class="o">.</span><span class="n">utc</span><span class="p">)</span>
+</span></span><span class="line"><span class="cl">    <span class="n">dt_beijing2</span> <span class="o">=</span> <span class="n">dt_utc2</span><span class="o">.</span><span class="n">astimezone</span><span class="p">(</span><span class="n">timezone</span><span class="p">(</span><span class="n">timedelta</span><span class="p">(</span><span class="n">hours</span><span class="o">=</span><span class="mi">8</span><span class="p">)))</span>
+</span></span><span class="line"><span class="cl">    <span class="n">formatted2</span> <span class="o">=</span> <span class="n">dt_beijing2</span><span class="o">.</span><span class="n">strftime</span><span class="p">(</span><span class="s2">&#34;%Y 年 %m 月 </span><span class="si">%d</span><span class="s2"> 日 %H:%M:%S, </span><span class="si">{}</span><span class="s2">&#34;</span><span class="o">.</span><span class="n">format</span><span class="p">(</span><span class="n">wd</span><span class="p">[</span><span class="n">dt_beijing2</span><span class="o">.</span><span class="n">weekday</span><span class="p">()]))</span>
+</span></span><span class="line"><span class="cl">    <span class="n">uf</span><span class="o">=</span><span class="n">formatted2</span>
+</span></span><span class="line"><span class="cl">    <span class="k">if</span> <span class="n">i</span><span class="p">[</span><span class="s2">&#34;parent_id&#34;</span><span class="p">]:</span>
+</span></span><span class="line"><span class="cl">        <span class="n">d</span><span class="p">[</span><span class="n">i</span><span class="p">[</span><span class="s2">&#34;parent_id&#34;</span><span class="p">]]</span> <span class="o">=</span> <span class="n">d</span><span class="o">.</span><span class="n">get</span><span class="p">(</span><span class="n">i</span><span class="p">[</span><span class="s2">&#34;parent_id&#34;</span><span class="p">],</span> <span class="p">[])</span>
+</span></span><span class="line"><span class="cl">        <span class="k">if</span> <span class="p">(</span><span class="n">dt_utc2</span> <span class="o">-</span> <span class="n">dt_utc1</span><span class="p">)</span><span class="o">.</span><span class="n">seconds</span> <span class="o">&gt;</span> <span class="mi">5</span><span class="p">:</span>
+</span></span><span class="line"><span class="cl">            <span class="nb">str</span><span class="o">=</span><span class="s2">&#34;&#34;&#34;&gt; &gt; </span><span class="si">{}</span><span class="s2">
+</span></span></span><span class="line"><span class="cl"><span class="s2">&gt; &gt;
+</span></span></span><span class="line"><span class="cl"><span class="s2">&gt; &gt; P：</span><span class="si">{}</span><span class="s2">
+</span></span></span><span class="line"><span class="cl"><span class="s2">&gt; &gt; U：</span><span class="si">{}</span><span class="s2">&#34;&#34;&#34;</span><span class="o">.</span><span class="n">format</span><span class="p">(</span><span class="n">i</span><span class="p">[</span><span class="s2">&#34;body&#34;</span><span class="p">]</span><span class="o">.</span><span class="n">replace</span><span class="p">(</span><span class="s2">&#34;</span><span class="se">\r\n</span><span class="s2">&#34;</span><span class="p">,</span><span class="s2">&#34;</span><span class="se">\n</span><span class="s2">&#34;</span><span class="p">)</span><span class="o">.</span><span class="n">replace</span><span class="p">(</span><span class="s2">&#34;</span><span class="se">\n</span><span class="s2">&#34;</span><span class="p">,</span><span class="s2">&#34;</span><span class="se">\n</span><span class="s2">&gt; &gt; &#34;</span><span class="p">),</span> <span class="n">pf</span><span class="p">,</span> <span class="n">uf</span><span class="p">)</span>
+</span></span><span class="line"><span class="cl">        <span class="k">else</span><span class="p">:</span>
+</span></span><span class="line"><span class="cl">            <span class="nb">str</span><span class="o">=</span><span class="s2">&#34;&#34;&#34;&gt; &gt; </span><span class="si">{}</span><span class="s2">
+</span></span></span><span class="line"><span class="cl"><span class="s2">&gt; &gt;
+</span></span></span><span class="line"><span class="cl"><span class="s2">&gt; &gt; P：</span><span class="si">{}</span><span class="s2">&#34;&#34;&#34;</span><span class="o">.</span><span class="n">format</span><span class="p">(</span><span class="n">i</span><span class="p">[</span><span class="s2">&#34;body&#34;</span><span class="p">]</span><span class="o">.</span><span class="n">replace</span><span class="p">(</span><span class="s2">&#34;</span><span class="se">\r\n</span><span class="s2">&#34;</span><span class="p">,</span><span class="s2">&#34;</span><span class="se">\n</span><span class="s2">&#34;</span><span class="p">)</span><span class="o">.</span><span class="n">replace</span><span class="p">(</span><span class="s2">&#34;</span><span class="se">\n</span><span class="s2">&#34;</span><span class="p">,</span><span class="s2">&#34;</span><span class="se">\n</span><span class="s2">&gt; &gt; &#34;</span><span class="p">),</span> <span class="n">pf</span><span class="p">)</span>
+</span></span><span class="line"><span class="cl">        <span class="n">d</span><span class="p">[</span><span class="n">i</span><span class="p">[</span><span class="s2">&#34;parent_id&#34;</span><span class="p">]]</span><span class="o">.</span><span class="n">append</span><span class="p">({</span><span class="n">i</span><span class="p">[</span><span class="s2">&#34;id&#34;</span><span class="p">]:</span><span class="nb">str</span><span class="p">})</span>
+</span></span><span class="line"><span class="cl"><span class="k">for</span> <span class="n">i</span> <span class="ow">in</span> <span class="n">data</span><span class="p">[::</span><span class="o">-</span><span class="mi">1</span><span class="p">]:</span>
+</span></span><span class="line"><span class="cl">    <span class="nb">id</span> <span class="o">=</span> <span class="n">i</span><span class="p">[</span><span class="s2">&#34;id&#34;</span><span class="p">]</span>
+</span></span><span class="line"><span class="cl">    <span class="n">content</span><span class="o">=</span><span class="n">i</span><span class="p">[</span><span class="s2">&#34;body&#34;</span><span class="p">]</span><span class="o">.</span><span class="n">replace</span><span class="p">(</span><span class="s2">&#34;</span><span class="se">\r\n</span><span class="s2">&#34;</span><span class="p">,</span><span class="s2">&#34;</span><span class="se">\n</span><span class="s2">&#34;</span><span class="p">)</span><span class="o">.</span><span class="n">replace</span><span class="p">(</span><span class="s2">&#34;</span><span class="se">\n</span><span class="s2">&#34;</span><span class="p">,</span><span class="s2">&#34;</span><span class="se">\n</span><span class="s2">&gt; &#34;</span><span class="p">)</span>
+</span></span><span class="line"><span class="cl">    <span class="n">dt_utc1</span> <span class="o">=</span> <span class="n">datetime</span><span class="o">.</span><span class="n">strptime</span><span class="p">(</span><span class="n">i</span><span class="p">[</span><span class="s2">&#34;created_at&#34;</span><span class="p">],</span> <span class="s2">&#34;%Y-%m-</span><span class="si">%d</span><span class="s2">T%H:%M:%SZ&#34;</span><span class="p">)</span><span class="o">.</span><span class="n">replace</span><span class="p">(</span><span class="n">tzinfo</span><span class="o">=</span><span class="n">timezone</span><span class="o">.</span><span class="n">utc</span><span class="p">)</span>
+</span></span><span class="line"><span class="cl">    <span class="n">dt_beijing1</span> <span class="o">=</span> <span class="n">dt_utc1</span><span class="o">.</span><span class="n">astimezone</span><span class="p">(</span><span class="n">timezone</span><span class="p">(</span><span class="n">timedelta</span><span class="p">(</span><span class="n">hours</span><span class="o">=</span><span class="mi">8</span><span class="p">)))</span>
+</span></span><span class="line"><span class="cl">    <span class="n">formatted1</span> <span class="o">=</span> <span class="n">dt_beijing1</span><span class="o">.</span><span class="n">strftime</span><span class="p">(</span><span class="s2">&#34;%Y 年 %m 月 </span><span class="si">%d</span><span class="s2"> 日 %H:%M:%S, </span><span class="si">{}</span><span class="s2">&#34;</span><span class="o">.</span><span class="n">format</span><span class="p">(</span><span class="n">wd</span><span class="p">[</span><span class="n">dt_beijing1</span><span class="o">.</span><span class="n">weekday</span><span class="p">()]))</span>
+</span></span><span class="line"><span class="cl">    <span class="n">pubf</span><span class="o">=</span><span class="n">formatted1</span>
+</span></span><span class="line"><span class="cl">    <span class="n">dt_utc2</span> <span class="o">=</span> <span class="n">datetime</span><span class="o">.</span><span class="n">strptime</span><span class="p">(</span><span class="n">i</span><span class="p">[</span><span class="s2">&#34;updated_at&#34;</span><span class="p">],</span> <span class="s2">&#34;%Y-%m-</span><span class="si">%d</span><span class="s2">T%H:%M:%SZ&#34;</span><span class="p">)</span><span class="o">.</span><span class="n">replace</span><span class="p">(</span><span class="n">tzinfo</span><span class="o">=</span><span class="n">timezone</span><span class="o">.</span><span class="n">utc</span><span class="p">)</span>
+</span></span><span class="line"><span class="cl">    <span class="n">dt_beijing2</span> <span class="o">=</span> <span class="n">dt_utc2</span><span class="o">.</span><span class="n">astimezone</span><span class="p">(</span><span class="n">timezone</span><span class="p">(</span><span class="n">timedelta</span><span class="p">(</span><span class="n">hours</span><span class="o">=</span><span class="mi">8</span><span class="p">)))</span>
+</span></span><span class="line"><span class="cl">    <span class="n">formatted2</span> <span class="o">=</span> <span class="n">dt_beijing2</span><span class="o">.</span><span class="n">strftime</span><span class="p">(</span><span class="s2">&#34;%Y 年 %m 月 </span><span class="si">%d</span><span class="s2"> 日 %H:%M:%S, </span><span class="si">{}</span><span class="s2">&#34;</span><span class="o">.</span><span class="n">format</span><span class="p">(</span><span class="n">wd</span><span class="p">[</span><span class="n">dt_beijing2</span><span class="o">.</span><span class="n">weekday</span><span class="p">()]))</span>
+</span></span><span class="line"><span class="cl">    <span class="n">upf</span><span class="o">=</span><span class="n">formatted2</span>
+</span></span><span class="line"><span class="cl">    <span class="k">if</span> <span class="n">i</span><span class="p">[</span><span class="s2">&#34;id&#34;</span><span class="p">]</span> <span class="ow">in</span> <span class="n">d</span><span class="o">.</span><span class="n">keys</span><span class="p">():</span>
+</span></span><span class="line"><span class="cl">        <span class="n">child</span><span class="o">=</span><span class="s2">&#34;&#34;&#34;
+</span></span></span><span class="line"><span class="cl"><span class="s2">&gt;
+</span></span></span><span class="line"><span class="cl"><span class="s2">&#34;&#34;&#34;</span>
+</span></span><span class="line"><span class="cl">        <span class="n">ii</span><span class="o">=</span><span class="p">[]</span>
+</span></span><span class="line"><span class="cl">        <span class="k">for</span> <span class="n">j</span> <span class="ow">in</span> <span class="n">d</span><span class="p">[</span><span class="n">i</span><span class="p">[</span><span class="s2">&#34;id&#34;</span><span class="p">]]:</span>
+</span></span><span class="line"><span class="cl">            <span class="n">ii</span><span class="o">.</span><span class="n">append</span><span class="p">(</span><span class="nb">list</span><span class="p">(</span><span class="n">j</span><span class="o">.</span><span class="n">values</span><span class="p">())[</span><span class="mi">0</span><span class="p">])</span>
+</span></span><span class="line"><span class="cl">        <span class="n">child</span><span class="o">=</span><span class="n">child</span><span class="o">.</span><span class="n">join</span><span class="p">(</span><span class="n">ii</span><span class="p">)</span>
+</span></span><span class="line"><span class="cl">        <span class="k">if</span> <span class="p">(</span><span class="n">dt_utc2</span><span class="o">-</span><span class="n">dt_utc1</span><span class="p">)</span><span class="o">.</span><span class="n">seconds</span><span class="o">&gt;</span><span class="mi">5</span><span class="p">:</span>
+</span></span><span class="line"><span class="cl">            <span class="nb">str</span> <span class="o">=</span> <span class="s2">&#34;&#34;&#34;
+</span></span></span><span class="line"><span class="cl"><span class="s2">&gt; </span><span class="si">{}</span><span class="s2">
+</span></span></span><span class="line"><span class="cl"><span class="s2"></span><span class="si">{}</span><span class="s2">
+</span></span></span><span class="line"><span class="cl"><span class="s2">&gt;
+</span></span></span><span class="line"><span class="cl"><span class="s2">&gt; P：</span><span class="si">{}</span><span class="s2">
+</span></span></span><span class="line"><span class="cl"><span class="s2">&gt; U：</span><span class="si">{}</span><span class="s2">
+</span></span></span><span class="line"><span class="cl"><span class="s2">&#34;&#34;&#34;</span><span class="o">.</span><span class="n">format</span><span class="p">(</span><span class="n">content</span><span class="p">,</span><span class="n">child</span><span class="p">,</span><span class="n">pubf</span><span class="p">,</span><span class="n">upf</span><span class="p">)</span>
+</span></span><span class="line"><span class="cl">        <span class="k">else</span><span class="p">:</span>
+</span></span><span class="line"><span class="cl">            <span class="nb">str</span> <span class="o">=</span> <span class="s2">&#34;&#34;&#34;
+</span></span></span><span class="line"><span class="cl"><span class="s2">&gt; </span><span class="si">{}</span><span class="s2">
+</span></span></span><span class="line"><span class="cl"><span class="s2"></span><span class="si">{}</span><span class="s2">
+</span></span></span><span class="line"><span class="cl"><span class="s2">&gt;
+</span></span></span><span class="line"><span class="cl"><span class="s2">&gt; P：</span><span class="si">{}</span><span class="s2">
+</span></span></span><span class="line"><span class="cl"><span class="s2">&#34;&#34;&#34;</span><span class="o">.</span><span class="n">format</span><span class="p">(</span><span class="n">content</span><span class="p">,</span><span class="n">child</span><span class="p">,</span><span class="n">pubf</span><span class="p">)</span>
+</span></span><span class="line"><span class="cl">        <span class="n">output</span><span class="o">+=</span><span class="nb">str</span>
+</span></span><span class="line"><span class="cl">    <span class="k">else</span><span class="p">:</span>
+</span></span><span class="line"><span class="cl">        <span class="k">if</span> <span class="n">i</span><span class="p">[</span><span class="s2">&#34;id&#34;</span><span class="p">]</span> <span class="ow">in</span> <span class="n">di</span><span class="p">:</span>
+</span></span><span class="line"><span class="cl">            <span class="k">if</span> <span class="p">(</span><span class="n">dt_utc2</span> <span class="o">-</span> <span class="n">dt_utc1</span><span class="p">)</span><span class="o">.</span><span class="n">seconds</span> <span class="o">&gt;</span> <span class="mi">5</span><span class="p">:</span>
+</span></span><span class="line"><span class="cl">                <span class="nb">str</span> <span class="o">=</span> <span class="s2">&#34;&#34;&#34;
+</span></span></span><span class="line"><span class="cl"><span class="s2">&gt; </span><span class="si">{}</span><span class="s2">
+</span></span></span><span class="line"><span class="cl"><span class="s2">&gt;
+</span></span></span><span class="line"><span class="cl"><span class="s2">&gt; P：</span><span class="si">{}</span><span class="s2">
+</span></span></span><span class="line"><span class="cl"><span class="s2">&gt; U：</span><span class="si">{}</span><span class="s2">
+</span></span></span><span class="line"><span class="cl"><span class="s2">&#34;&#34;&#34;</span><span class="o">.</span><span class="n">format</span><span class="p">(</span><span class="n">content</span><span class="p">,</span><span class="n">pubf</span><span class="p">,</span><span class="n">upf</span><span class="p">)</span>
+</span></span><span class="line"><span class="cl">            <span class="k">else</span><span class="p">:</span>
+</span></span><span class="line"><span class="cl">                <span class="nb">str</span> <span class="o">=</span> <span class="s2">&#34;&#34;&#34;
+</span></span></span><span class="line"><span class="cl"><span class="s2">&gt; </span><span class="si">{}</span><span class="s2">
+</span></span></span><span class="line"><span class="cl"><span class="s2">&gt;
+</span></span></span><span class="line"><span class="cl"><span class="s2">&gt; P：</span><span class="si">{}</span><span class="s2">
+</span></span></span><span class="line"><span class="cl"><span class="s2">&#34;&#34;&#34;</span><span class="o">.</span><span class="n">format</span><span class="p">(</span><span class="n">content</span><span class="p">,</span><span class="n">pubf</span><span class="p">)</span>
+</span></span><span class="line"><span class="cl">            <span class="n">output</span> <span class="o">+=</span> <span class="nb">str</span>
+</span></span><span class="line"><span class="cl">
+</span></span><span class="line"><span class="cl"><span class="k">with</span> <span class="nb">open</span><span class="p">(</span><span class="s2">&#34;a.txt&#34;</span><span class="p">,</span><span class="s2">&#34;w&#34;</span><span class="p">,</span> <span class="n">encoding</span><span class="o">=</span><span class="s2">&#34;utf-8&#34;</span><span class="p">)</span> <span class="k">as</span> <span class="n">a</span><span class="p">:</span>
+</span></span><span class="line"><span class="cl">    <span class="n">a</span><span class="o">.</span><span class="n">write</span><span class="p">(</span><span class="n">output</span><span class="p">)</span></span></span></code></pre></div>
+    </div>
+  </div>
+      
+      
+      
+      <div class="word-count-container">
+        
+        
+        <span class="word-count">- Total words: 610 -</span>
+        
+      </div>
+      
+    </div>
+    
+      
+        <div class="pagination">
+          <div class="pagination__title">
+            <span class="pagination__title-h"
+              >Read other posts</span
+            >
+            <hr />
+          </div>
+          <div class="pagination__buttons">
+            
+              <span class="button previous">
+                <a href="/posts/139/">
+                  <span class="button__icon">←</span>
+                  <span class="button__text">aplayer.js 中的一些问题及修复</span>
+                </a>
+              </span>
+            
+            
+              <span class="button next">
+                <a href="/posts/news-two/">
+                  <span class="button__text">更新日志：2025-10-04</span>
+                  <span class="button__icon">→</span>
+                </a>
+              </span>
+            
+          </div>
+        </div>
+      
+    
+
+    
+      
+        
+
+
+
+<div id="comments"></div>
+
+<script>
+function giscusTheme() {
+    const baseURI =  "https://cystee.github.io";
+    const localTheme = window.localStorage && window.localStorage.getItem("theme");
+    const isOSDark = window.matchMedia("(prefers-color-scheme: dark)").matches;
+    const themeUndefined = !new RegExp("(dark|light)-theme").test(document.body.className);
+    if (themeUndefined) {
+        if (isOSDark) {
+            return baseURI + '/darkgiscus.css';
+        } else {
+            return baseURI + '/lightgiscus.css';
+        }
+    } else if (localTheme === 'dark-theme') {
+        return baseURI + '/darkgiscus.css';
+    } else if (localTheme === 'light-theme') {
+        return baseURI + '/lightgiscus.css';
+    } else {
+        return 'transparent_dark';
+    }
+}
+function loadGiscus() {
+    const newGiscusScript = document.createElement('script');
+    newGiscusScript.src = '/client.js';
+    newGiscusScript.setAttribute('data-repo', 'Cystee/cystee.github.io');
+    newGiscusScript.setAttribute('data-repo-id', 'MDEwOlJlcG9zaXRvcnkzNjQxODE4NTY=');
+    newGiscusScript.setAttribute('data-category', 'Announcements');
+    newGiscusScript.setAttribute('data-category-id', 'DIC_kwDOFbT5YM4ClGPC');
+    newGiscusScript.setAttribute('data-mapping', 'og:title');
+    newGiscusScript.setAttribute('data-strict', '0');
+    newGiscusScript.setAttribute('data-reactions-enabled', '0');
+    newGiscusScript.setAttribute('data-emit-metadata', '0');
+    newGiscusScript.setAttribute('data-input-position', 'top');
+    newGiscusScript.setAttribute('data-theme', giscusTheme());
+    newGiscusScript.setAttribute('data-lang', 'zh-CN');
+    newGiscusScript.setAttribute('crossorigin', 'anonymous');
+    newGiscusScript.async = true;
+    document.getElementById('comments').appendChild(newGiscusScript);
+}
+document.addEventListener('DOMContentLoaded', () => {
+    loadGiscus();
+});
+</script>
+
+      
+    
+  </article>
+
+      </div>
+
+      
+        <footer class="footer">
+  <div class="footer__inner">
+    
+      <a
+  href="/"
+  class="logo"
+  style="text-decoration: none;"
+>
+  
+    <span class="logo__mark"><svg xmlns="http://www.w3.org/2000/svg" class="greater-icon" viewBox="0 0 44 44">
+  <path fill="none" d="M15 8l14.729 14.382L15 35.367" />
+</svg>
+</span>
+    <span class="logo__text"
+      >golb</span
+    >
+    <span class="logo__cursor"></span>
+  
+</a>
+
+      <div class="copyright">
+        <span>© 2025</span>
+        <span>HCY</span>
+      </div>
+    
+  </div>
+</footer>
+
+
+
+
+<script type="text/javascript" src="/bundle.min.js"></script>
+
+<div id="added">
+    <script>
+        document.addEventListener("DOMContentLoaded", function () {
+            const link = document.createElement("link");
+            link.rel = "stylesheet";
+            link.href = "/fonts.min.css";
+            document.head.appendChild(link);
+            const images = document.querySelectorAll('img');
+            images.forEach(img => {
+                const wrapper = document.createElement('div');
+                wrapper.className = 'image-wrapper';
+                img.parentNode.insertBefore(wrapper, img);
+                wrapper.appendChild(img);
+            });
+
+            const link2 = document.createElement("link");
+            link2.rel = "stylesheet";
+            link2.href = "/APlayer.min.css";
+            document.head.appendChild(link2);
+
+            const script1 = document.createElement("script");
+            script1.src = "/APlayer.min.js";
+            document.body.appendChild(script1);
+            const script2 = document.createElement("script");
+            script2.src = "/aplayer.js";
+            document.body.appendChild(script2);
+            script1.onload = function () {
+                script2.onload = function () {
+                    let ap = new APlayer({
+                        container: document.getElementById('aplayer'),
+                        fixed: true,
+                        mini: true,
+                        autoplay: false,
+                        theme: 'var(--color)',
+                        loop: 'all',
+                        order: 'random',
+                        preload: 'auto',
+                        volume: 0.7,
+                        mutex: true,
+                        listFolded: false,
+                        listMaxHeight: "15vh",
+                        lrcType: 3,
+                        audio: music
+                    });
+
+                    function doStuff() {
+                        var flag = 0; 
+
+                        try {
+                            ap = ap; 
+                            ap.list; 
+                            flag = 1; 
+                            console.log('成功获取aplayer实例对象', ap.list)
+                        } catch (error) {
+                            setTimeout(doStuff, 50); 
+                            console.error("不获取aplayer实例对象，并捕获到错误：", error);
+                            return;
+                        }
+
+                        if (flag) { 
+                            document.getElementsByClassName("aplayer-icon-menu")[0].click() 
+
+                            
+                            if (localStorage.getItem("musicIndex") != null) {
+                                musicIndex = localStorage.getItem("musicIndex"); 
+                                ap.list.switch(musicIndex); 
+                            }
+
+                            
+                            if (sessionStorage.getItem("musicTime") != null) {
+                                window.musict = sessionStorage.getItem("musicTime"); 
+                                ap.setMode(sessionStorage.getItem("musicMode")); 
+                                if (sessionStorage.getItem("musicPaused") != '1') { 
+                                    ap.play();
+                                }
+
+                                var g = true; 
+                                ap.on("canplay", function () { 
+                                    if (g) {
+                                        ap.seek(window.musict); 
+                                        g = false; 
+                                    }
+                                });
+                            } else {
+                                sessionStorage.setItem("musicPaused", 1); 
+                                ap.setMode("mini"); 
+                            }
+
+                            
+                            if (sessionStorage.getItem("musicVolume") != null) {
+                                ap.audio.volume = Number(sessionStorage.getItem("musicVolume")); 
+                            }
+
+                            
+                            ap.on("pause", function () {
+                                sessionStorage.setItem("musicPaused", 1); 
+                            }); 
+
+                            
+                            ap.on("play", function () {
+                                sessionStorage.setItem("musicPaused", 0); 
+                            });
+
+                            
+                            ap.audio.onvolumechange = function () {
+                                sessionStorage.setItem("musicVolume", ap.audio.volume); 
+                            }; 
+
+
+                            
+                            setInterval(function () {
+                                musicIndex = ap.list.index; 
+                                musicTime = ap.audio.currentTime; 
+                                musicMode = ap.mode; 
+                                localStorage.setItem("musicIndex", musicIndex); 
+                                sessionStorage.setItem("musicTime", musicTime); 
+                                sessionStorage.setItem("musicMode", musicMode); 
+                            }, 200); 
+                        };
+                    };
+
+                    window.onload = function () {
+                        doStuff();
+                    };
+                }
+            }
+        });
+    </script>
+    <script>
+        function showNotification() {
+            const added = document.getElementById("added")
+            const refresh = document.createElement("div");
+            refresh.id = "app-refresh";
+            refresh.className = "app-refresh";
+            refresh.innerHTML = '<div id="app-refresh-wrap" class="app-refresh-wrap" style="text-align:right"><label><span style="padding-left:1px;font-weight:bold;position:relative;top:14px;">✨</span>&emsp;&emsp;侦测到变化</label><br><a class="ref-a" href="javascript:location.reload()">重载&emsp;</a><a class="ref-a" href="javascript:document.getElementById(`app-refresh`).remove()">忽略</a></div>';
+            added.appendChild(refresh);
+            setTimeout(() => { refresh.style.right = "-9em"; }, 200);
+            const a1 = setTimeout(() => {
+                refresh.style.right = "-18em";
+            }, 10000);
+            refresh.onmouseenter = function () {
+                setTimeout(() => { refresh.style.right = "-9em"; }, 200);
+                clearTimeout(a1);
+            }
+            refresh.onmouseleave = function () { setTimeout(() => { refresh.style.right = "-18em"; }, 200); }
+        }
+        if ('serviceWorker' in navigator) {
+            navigator.serviceWorker.controller && navigator.serviceWorker.addEventListener(
+                "controllerchange",
+                showNotification 
+            );
+            window.addEventListener("load", function () {
+                navigator.serviceWorker.register('/sw.js', { scope: '/' }).then(function (registration) {
+                    console.log('ServiceWorker registration successful with scope: ', registration.scope);
+                }).catch(function (err) {
+                    console.log('ServiceWorker registration failed: ', err);
+                });
+            });
+        }
+    </script>
+    <div id="aplayer"></div>
+</div>
+
+
+
+      
+    </div>
+
+    
+
+  </body>
+</html>
