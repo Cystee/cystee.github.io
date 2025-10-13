@@ -71,6 +71,8 @@
 
 
 
+
+
 <link rel="stylesheet" href="/css/style.css" />
 
 <link rel="stylesheet" href="/style.min.css" />
@@ -123,7 +125,7 @@ function _0x5640(){var _0x1d960a=['NQ==','btoa','2490468HLINSV','pjWZd','setItem
 
 
   </head>
-  <body   style="transition: all .5s;">
+  <body >
     <script>
       const localTheme = window.localStorage && window.localStorage.getItem("theme");
       if (localTheme) {
@@ -131,6 +133,9 @@ function _0x5640(){var _0x1d960a=['NQ==','btoa','2490468HLINSV','pjWZd','setItem
         document.body.classList.remove("light-theme", "dark-theme");
         document.body.classList.add(localTheme);
       }
+      setTimeout(() => {
+        document.body.style = "transition: all .5s;";
+      }, 500);
     </script>
     <div class="container">
       <header class="header">
@@ -323,6 +328,109 @@ function _0x5640(){var _0x1d960a=['NQ==','btoa','2490468HLINSV','pjWZd','setItem
     
       
       <article class="post on-list">
+        <h1 class="post-title"><a href="/posts/131/">记一次密码认证程序设计——搭建 Vercel API</a></h1>
+        <div class="post-meta">
+          
+            <time class="post-date">
+              0002-05-11
+            </time>
+
+            
+          
+          
+
+
+          
+        </div>
+
+        
+          <span class="post-tags">
+            
+              <a href="/tags/main/">#MAIN</a>&nbsp;
+            
+              <a href="/tags/main-untagged/">#MAIN: untagged</a>&nbsp;
+            
+          </span>
+        
+
+        
+
+        <div class="post-content" id="468593172">
+        
+          
+            <p>写于 2025 年 7 月。</p>
+<p>不知为了什么，反正我就是想给本博客添加密码，然而博客是纯静态的，所以想着用一个自建 API 实现密码的验证。免费的API托管商有很多，就选用Vercel吧。</p>
+<p>参考文 …</p>
+          
+        
+        </div>
+        
+          <div>
+            <a class="read-more button" href="/posts/131/"
+              >阅读全文 →</a
+            >
+          </div>
+        
+        
+        
+      </article>
+    
+      
+      <article class="post on-list">
+        <h1 class="post-title"><a href="/posts/130/">GOLB 短代码示例</a></h1>
+        <div class="post-meta">
+          
+            <time class="post-date">
+              0002-05-10
+            </time>
+
+            
+          
+          
+
+
+          
+        </div>
+
+        
+          <span class="post-tags">
+            
+              <a href="/tags/main/">#MAIN</a>&nbsp;
+            
+              <a href="/tags/main-untagged/">#MAIN: untagged</a>&nbsp;
+            
+          </span>
+        
+
+        
+
+        <div class="post-content" id="974513286">
+        
+          
+            <blockquote>
+<p>注：使用前检查文章是否需要手动摘要 <code>&lt;!--more--&gt;</code></p></blockquote>
+<h2 id="codehtml">
+  code.html
+  <a href="#codehtml" class="h-anchor" aria-hidden="true">#</a>
+</h2>
+<div class="highlight"><pre tabindex="0" class="chroma"><code class="language-go-html-template" data-lang="go-html-template"><span class="line"><span class="cl">&lt;!--more--&gt;
+</span></span><span class="line"><span class="cl"><span class="cp">{{</span><span class="err">&lt;</span><span class="w"> </span><span class="nx">code</span><span class="w"> </span><span class="nx">language</span><span class="o">= …</span></span></span></span></span></code></pre></div>
+          
+        
+        </div>
+        
+          <div>
+            <a class="read-more button" href="/posts/130/"
+              >阅读全文 →</a
+            >
+          </div>
+        
+        
+        
+      </article>
+    
+      
+      <article class="post on-list">
         <h1 class="post-title"><a href="/posts/129/">QQ 空间网页版一键清空小黑屋：油猴脚本</a></h1>
         <div class="post-meta">
           
@@ -350,7 +458,7 @@ function _0x5640(){var _0x1d960a=['NQ==','btoa','2490468HLINSV','pjWZd','setItem
 
         
 
-        <div class="post-content" id="329851647">
+        <div class="post-content" id="128349756">
         
           
             <p>不说了，直接贴上脚本代码：</p>
@@ -397,7 +505,7 @@ function _0x5640(){var _0x1d960a=['NQ==','btoa','2490468HLINSV','pjWZd','setItem
 
         
 
-        <div class="post-content" id="258469731">
+        <div class="post-content" id="546187329">
         
           
             <p>不说了，JS 代码直接上：</p>
@@ -445,7 +553,7 @@ function _0x5640(){var _0x1d960a=['NQ==','btoa','2490468HLINSV','pjWZd','setItem
 
         
 
-        <div class="post-content" id="214683975">
+        <div class="post-content" id="954826713">
         
           
             <p>由于这个博客更新之后，首页不会再是乱糟糟的了，所以在本“记录”模块下，我可以肆无忌惮地抄那些看起来乱糟糟的代码。</p>
@@ -493,7 +601,7 @@ function _0x5640(){var _0x1d960a=['NQ==','btoa','2490468HLINSV','pjWZd','setItem
 
         
 
-        <div class="post-content" id="815492637">
+        <div class="post-content" id="129485637">
         
           
             <p>没记错的话，这篇文章前，这个博客所展示的文章已经发生了至少两次重大的改变。如果文章放在博客里，那么世界上几乎所有人差不多可以在任何地方看到。这并不重要。我能想到的博客的意义有：</p>
@@ -593,106 +701,111 @@ function _0x5640(){var _0x1d960a=['NQ==','btoa','2490468HLINSV','pjWZd','setItem
             const script2 = document.createElement("script");
             script2.src = "/aplayer.js";
             document.body.appendChild(script2);
-            script1.onload = function () {
-                script2.onload = function () {
-                    let ap = new APlayer({
-                        container: document.getElementById('aplayer'),
-                        fixed: true,
-                        mini: true,
-                        autoplay: false,
-                        theme: 'var(--color)',
-                        loop: 'all',
-                        order: 'random',
-                        preload: 'auto',
-                        volume: 0.7,
-                        mutex: true,
-                        listFolded: false,
-                        listMaxHeight: "15vh",
-                        lrcType: 3,
-                        audio: music
-                    });
 
-                    function doStuff() {
-                        var flag = 0; 
+            let ap;
+            function doStuff() {
+                var flag = 0; 
 
-                        try {
-                            ap = ap; 
-                            ap.list; 
-                            flag = 1; 
-                            console.log('成功获取aplayer实例对象', ap.list)
-                        } catch (error) {
-                            setTimeout(doStuff, 50); 
-                            console.error("不获取aplayer实例对象，并捕获到错误：", error);
-                            return;
+                try {
+                    ap = ap; 
+                    ap.list; 
+                    flag = 1; 
+                    console.log('成功获取aplayer实例对象', ap.list)
+                } catch (error) {
+                    setTimeout(doStuff, 50); 
+                    console.error("不获取aplayer实例对象，并捕获到错误：", error);
+                    return;
+                }
+
+                if (flag) { 
+                    
+                    ap.container.querySelector(".aplayer-miniswitcher").addEventListener("click", function () {
+                        if ("mini" !== ap.mode && !ap.container.querySelector(".aplayer-list").classList.contains("aplayer-list-hide")) {
+                            ap.container.querySelector(".aplayer-list ol").scroll({
+                                top: 32 * ap.list.index,
+                                behavior: "smooth",
+                            });
+                        }
+                    })
+
+                    
+                    if (localStorage.getItem("musicIndex") != null) {
+                        musicIndex = localStorage.getItem("musicIndex"); 
+                        ap.list.switch(musicIndex); 
+                    }
+
+                    
+                    if (sessionStorage.getItem("musicTime") != null) {
+                        window.musict = sessionStorage.getItem("musicTime"); 
+                        ap.setMode(sessionStorage.getItem("musicMode")); 
+                        if (sessionStorage.getItem("musicPaused") != '1') { 
+                            ap.play();
                         }
 
-                        if (flag) { 
-                            document.getElementsByClassName("aplayer-icon-menu")[0].click() 
-
-                            
-                            if (localStorage.getItem("musicIndex") != null) {
-                                musicIndex = localStorage.getItem("musicIndex"); 
-                                ap.list.switch(musicIndex); 
+                        var g = true; 
+                        ap.on("canplay", function () { 
+                            if (g) {
+                                ap.seek(window.musict); 
+                                g = false; 
                             }
+                        });
+                    } else {
+                        sessionStorage.setItem("musicPaused", 1); 
+                        ap.setMode("mini"); 
+                    }
 
-                            
-                            if (sessionStorage.getItem("musicTime") != null) {
-                                window.musict = sessionStorage.getItem("musicTime"); 
-                                ap.setMode(sessionStorage.getItem("musicMode")); 
-                                if (sessionStorage.getItem("musicPaused") != '1') { 
-                                    ap.play();
-                                }
+                    
+                    if (sessionStorage.getItem("musicVolume") != null) {
+                        ap.audio.volume = Number(sessionStorage.getItem("musicVolume")); 
+                    }
 
-                                var g = true; 
-                                ap.on("canplay", function () { 
-                                    if (g) {
-                                        ap.seek(window.musict); 
-                                        g = false; 
-                                    }
-                                });
-                            } else {
-                                sessionStorage.setItem("musicPaused", 1); 
-                                ap.setMode("mini"); 
-                            }
+                    
+                    ap.on("pause", function () {
+                        sessionStorage.setItem("musicPaused", 1); 
+                    }); 
 
-                            
-                            if (sessionStorage.getItem("musicVolume") != null) {
-                                ap.audio.volume = Number(sessionStorage.getItem("musicVolume")); 
-                            }
+                    
+                    ap.on("play", function () {
+                        sessionStorage.setItem("musicPaused", 0); 
+                    });
 
-                            
-                            ap.on("pause", function () {
-                                sessionStorage.setItem("musicPaused", 1); 
-                            }); 
-
-                            
-                            ap.on("play", function () {
-                                sessionStorage.setItem("musicPaused", 0); 
-                            });
-
-                            
-                            ap.audio.onvolumechange = function () {
-                                sessionStorage.setItem("musicVolume", ap.audio.volume); 
-                            }; 
+                    
+                    ap.audio.onvolumechange = function () {
+                        sessionStorage.setItem("musicVolume", ap.audio.volume); 
+                    }; 
 
 
-                            
-                            setInterval(function () {
-                                musicIndex = ap.list.index; 
-                                musicTime = ap.audio.currentTime; 
-                                musicMode = ap.mode; 
-                                localStorage.setItem("musicIndex", musicIndex); 
-                                sessionStorage.setItem("musicTime", musicTime); 
-                                sessionStorage.setItem("musicMode", musicMode); 
-                            }, 200); 
-                        };
-                    };
+                    
+                    setInterval(function () {
+                        musicIndex = ap.list.index; 
+                        musicTime = ap.audio.currentTime; 
+                        musicMode = ap.mode; 
+                        localStorage.setItem("musicIndex", musicIndex); 
+                        sessionStorage.setItem("musicTime", musicTime); 
+                        sessionStorage.setItem("musicMode", musicMode); 
+                    }, 200); 
+                };
+            };
 
-                    window.onload = function () {
-                        doStuff();
-                    };
-                }
-            }
+            window.onload = function () {
+                ap = new APlayer({
+                    container: document.getElementById('aplayer'),
+                    fixed: true,
+                    mini: true,
+                    autoplay: false,
+                    theme: 'var(--color)',
+                    loop: 'all',
+                    order: 'random',
+                    preload: 'auto',
+                    volume: 0.7,
+                    mutex: true,
+                    listFolded: false,
+                    listMaxHeight: "15vh",
+                    lrcType: 3,
+                    audio: music
+                });
+                doStuff();
+            };
         });
     </script>
     <script>

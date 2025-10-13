@@ -71,6 +71,8 @@
 
 
 
+
+
 <link rel="stylesheet" href="/css/style.css" />
 
 <link rel="stylesheet" href="/style.min.css" />
@@ -123,7 +125,7 @@ function _0x5640(){var _0x1d960a=['NQ==','btoa','2490468HLINSV','pjWZd','setItem
 
 
   </head>
-  <body   style="transition: all .5s;">
+  <body >
     <script>
       const localTheme = window.localStorage && window.localStorage.getItem("theme");
       if (localTheme) {
@@ -131,6 +133,9 @@ function _0x5640(){var _0x1d960a=['NQ==','btoa','2490468HLINSV','pjWZd','setItem
         document.body.classList.remove("light-theme", "dark-theme");
         document.body.classList.add(localTheme);
       }
+      setTimeout(() => {
+        document.body.style = "transition: all .5s;";
+      }, 500);
     </script>
     <div class="container">
       <header class="header">
@@ -465,106 +470,111 @@ function _0x5640(){var _0x1d960a=['NQ==','btoa','2490468HLINSV','pjWZd','setItem
             const script2 = document.createElement("script");
             script2.src = "/aplayer.js";
             document.body.appendChild(script2);
-            script1.onload = function () {
-                script2.onload = function () {
-                    let ap = new APlayer({
-                        container: document.getElementById('aplayer'),
-                        fixed: true,
-                        mini: true,
-                        autoplay: false,
-                        theme: 'var(--color)',
-                        loop: 'all',
-                        order: 'random',
-                        preload: 'auto',
-                        volume: 0.7,
-                        mutex: true,
-                        listFolded: false,
-                        listMaxHeight: "15vh",
-                        lrcType: 3,
-                        audio: music
-                    });
 
-                    function doStuff() {
-                        var flag = 0; 
+            let ap;
+            function doStuff() {
+                var flag = 0; 
 
-                        try {
-                            ap = ap; 
-                            ap.list; 
-                            flag = 1; 
-                            console.log('成功获取aplayer实例对象', ap.list)
-                        } catch (error) {
-                            setTimeout(doStuff, 50); 
-                            console.error("不获取aplayer实例对象，并捕获到错误：", error);
-                            return;
+                try {
+                    ap = ap; 
+                    ap.list; 
+                    flag = 1; 
+                    console.log('成功获取aplayer实例对象', ap.list)
+                } catch (error) {
+                    setTimeout(doStuff, 50); 
+                    console.error("不获取aplayer实例对象，并捕获到错误：", error);
+                    return;
+                }
+
+                if (flag) { 
+                    
+                    ap.container.querySelector(".aplayer-miniswitcher").addEventListener("click", function () {
+                        if ("mini" !== ap.mode && !ap.container.querySelector(".aplayer-list").classList.contains("aplayer-list-hide")) {
+                            ap.container.querySelector(".aplayer-list ol").scroll({
+                                top: 32 * ap.list.index,
+                                behavior: "smooth",
+                            });
+                        }
+                    })
+
+                    
+                    if (localStorage.getItem("musicIndex") != null) {
+                        musicIndex = localStorage.getItem("musicIndex"); 
+                        ap.list.switch(musicIndex); 
+                    }
+
+                    
+                    if (sessionStorage.getItem("musicTime") != null) {
+                        window.musict = sessionStorage.getItem("musicTime"); 
+                        ap.setMode(sessionStorage.getItem("musicMode")); 
+                        if (sessionStorage.getItem("musicPaused") != '1') { 
+                            ap.play();
                         }
 
-                        if (flag) { 
-                            document.getElementsByClassName("aplayer-icon-menu")[0].click() 
-
-                            
-                            if (localStorage.getItem("musicIndex") != null) {
-                                musicIndex = localStorage.getItem("musicIndex"); 
-                                ap.list.switch(musicIndex); 
+                        var g = true; 
+                        ap.on("canplay", function () { 
+                            if (g) {
+                                ap.seek(window.musict); 
+                                g = false; 
                             }
+                        });
+                    } else {
+                        sessionStorage.setItem("musicPaused", 1); 
+                        ap.setMode("mini"); 
+                    }
 
-                            
-                            if (sessionStorage.getItem("musicTime") != null) {
-                                window.musict = sessionStorage.getItem("musicTime"); 
-                                ap.setMode(sessionStorage.getItem("musicMode")); 
-                                if (sessionStorage.getItem("musicPaused") != '1') { 
-                                    ap.play();
-                                }
+                    
+                    if (sessionStorage.getItem("musicVolume") != null) {
+                        ap.audio.volume = Number(sessionStorage.getItem("musicVolume")); 
+                    }
 
-                                var g = true; 
-                                ap.on("canplay", function () { 
-                                    if (g) {
-                                        ap.seek(window.musict); 
-                                        g = false; 
-                                    }
-                                });
-                            } else {
-                                sessionStorage.setItem("musicPaused", 1); 
-                                ap.setMode("mini"); 
-                            }
+                    
+                    ap.on("pause", function () {
+                        sessionStorage.setItem("musicPaused", 1); 
+                    }); 
 
-                            
-                            if (sessionStorage.getItem("musicVolume") != null) {
-                                ap.audio.volume = Number(sessionStorage.getItem("musicVolume")); 
-                            }
+                    
+                    ap.on("play", function () {
+                        sessionStorage.setItem("musicPaused", 0); 
+                    });
 
-                            
-                            ap.on("pause", function () {
-                                sessionStorage.setItem("musicPaused", 1); 
-                            }); 
-
-                            
-                            ap.on("play", function () {
-                                sessionStorage.setItem("musicPaused", 0); 
-                            });
-
-                            
-                            ap.audio.onvolumechange = function () {
-                                sessionStorage.setItem("musicVolume", ap.audio.volume); 
-                            }; 
+                    
+                    ap.audio.onvolumechange = function () {
+                        sessionStorage.setItem("musicVolume", ap.audio.volume); 
+                    }; 
 
 
-                            
-                            setInterval(function () {
-                                musicIndex = ap.list.index; 
-                                musicTime = ap.audio.currentTime; 
-                                musicMode = ap.mode; 
-                                localStorage.setItem("musicIndex", musicIndex); 
-                                sessionStorage.setItem("musicTime", musicTime); 
-                                sessionStorage.setItem("musicMode", musicMode); 
-                            }, 200); 
-                        };
-                    };
+                    
+                    setInterval(function () {
+                        musicIndex = ap.list.index; 
+                        musicTime = ap.audio.currentTime; 
+                        musicMode = ap.mode; 
+                        localStorage.setItem("musicIndex", musicIndex); 
+                        sessionStorage.setItem("musicTime", musicTime); 
+                        sessionStorage.setItem("musicMode", musicMode); 
+                    }, 200); 
+                };
+            };
 
-                    window.onload = function () {
-                        doStuff();
-                    };
-                }
-            }
+            window.onload = function () {
+                ap = new APlayer({
+                    container: document.getElementById('aplayer'),
+                    fixed: true,
+                    mini: true,
+                    autoplay: false,
+                    theme: 'var(--color)',
+                    loop: 'all',
+                    order: 'random',
+                    preload: 'auto',
+                    volume: 0.7,
+                    mutex: true,
+                    listFolded: false,
+                    listMaxHeight: "15vh",
+                    lrcType: 3,
+                    audio: music
+                });
+                doStuff();
+            };
         });
     </script>
     <script>
