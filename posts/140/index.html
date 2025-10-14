@@ -649,7 +649,7 @@ document.addEventListener('DOMContentLoaded', () => {
             const refresh = document.createElement("div");
             refresh.id = "app-refresh";
             refresh.className = "app-refresh";
-            refresh.innerHTML = '<div id="app-refresh-wrap" class="app-refresh-wrap" style="text-align:right"><label><span style="padding-left:1px;font-weight:bold;position:relative;top:14px;">✨</span>&emsp;&emsp;侦测到变化</label><br><a class="ref-a" href="javascript:location.reload()">重载&emsp;</a><a class="ref-a" href="javascript:document.getElementById(`app-refresh`).remove()">忽略</a></div>';
+            refresh.innerHTML = '<div id="app-refresh-wrap" class="app-refresh-wrap" style="text-align:right"><label><span style="padding-left:1px;font-weight:bold;position:relative;top:14px;">✨</span>&emsp;&emsp;侦测到变化</label><br><a class="ref-a" href="javascript:location.reload()">重载</a>&emsp;<a class="ref-a" href="javascript:document.getElementById(`app-refresh`).remove()">忽略</a></div>';
             added.appendChild(refresh);
             setTimeout(() => { refresh.style.right = "-9em"; }, 200);
             const a1 = setTimeout(() => {
