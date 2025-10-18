@@ -317,7 +317,7 @@
     
       
       <article class="post on-list">
-        <h1 class="post-title"><a href="/posts/news-three/">更新日志（集合）</a></h1>
+        <h1 class="post-title"><a href="/posts/news-log-update-three/">更新日志（集合）</a></h1>
         <div class="post-meta">
           
             <time class="post-date">
@@ -344,18 +344,20 @@
 
         
 
-        <div class="post-content" id="829437156">
+        <div class="post-content" id="831756429">
         
           
-            <p>2025-10-09：</p>
-<p>优化搜索页面。</p>
+            <p>2025-10-19:<br>
+移除<em>单向友链</em>。</p>
+<p>2025-10-09：<br>
+优化搜索页面。</p>
 
           
         
         </div>
         
           <div>
-            <a class="read-more button" href="/posts/news-three/"
+            <a class="read-more button" href="/posts/news-log-update-three/"
               >阅读全文 →</a
             >
           </div>
@@ -393,7 +395,7 @@
 
         
 
-        <div class="post-content" id="764528913">
+        <div class="post-content" id="493287615">
         
           
             <p>新增全局 Aplayer 播放器。</p>
@@ -443,7 +445,7 @@
 
         
 
-        <div class="post-content" id="854761329">
+        <div class="post-content" id="539628471">
         
           
             <h2 id="为页内链接添加滚动动画">
@@ -653,7 +655,36 @@
             const refresh = document.createElement("div");
             refresh.id = "app-refresh";
             refresh.className = "app-refresh";
-            refresh.innerHTML = '<div id="app-refresh-wrap" class="app-refresh-wrap" style="text-align:right"><label><span style="padding-left:1px;font-weight:bold;position:relative;top:14px;">✨</span>&emsp;&emsp;侦测到变化</label><br><a class="ref-a" href="javascript:location.reload()">重载</a>&emsp;<a class="ref-a" href="javascript:document.getElementById(`app-refresh`).remove()">忽略</a></div>';
+            refresh.innerHTML = `<style>
+.app-refresh {
+    position: fixed;
+    bottom: 0;
+    right: -22em;
+    background: var(--refresh-bg);
+    color: var(--color);
+    backdrop-filter: blur(8px);
+    /* border-radius: 0.5rem; */
+    z-index: 99999;
+    padding: 1em 12em 1em 1em;
+    transition: all 0.5s ease
+}
+.app-wrap {
+    display: flex;
+    align-items: center;
+}
+.ref-a {
+    text-decoration: none;
+    filter: drop-shadow(2px 2px 5px rgb(128,128,128));
+    color: var(--color);
+    transition: color 0.3s;
+}
+.ref-a:hover {
+    color: var(--refresh);
+}
+.app-left {
+    margin-right: 2em;
+}
+</style><div class="app-wrap"><span class="app-left">✨</span><span>侦测到变化<br><a class="ref-a" href="javascript:location.reload()">重载</a>&emsp;<a class="ref-a" href="javascript:document.getElementById('app-refresh').remove()">忽略</a></span></div>`;
             added.appendChild(refresh);
             setTimeout(() => { refresh.style.right = "-9em"; }, 200);
             const a1 = setTimeout(() => {

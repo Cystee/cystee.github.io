@@ -270,30 +270,6 @@ img[src*="emoji"] {
     background-color: transparent;
 }
 
-.app-refresh {
-    position: fixed;
-    bottom: 0;
-    right: -22em;
-    background: var(--refresh-bg);
-    color: var(--color);
-    backdrop-filter: blur(8px);
-    /* border-radius: 0.5rem; */
-    z-index: 99999;
-    padding: 1em 12em 1em 1em;
-    transition: all 0.5s ease
-}
-
-.ref-a {
-    text-decoration: none;
-    filter: drop-shadow(2px 2px 5px rgb(128,128,128));
-    color: var(--color);
-    transition: color 0.3s;
-}
-
-.ref-a:hover {
-    color: var(--refresh);
-}
-
 ::selection {
     background-color: var(--selection-color);
 }

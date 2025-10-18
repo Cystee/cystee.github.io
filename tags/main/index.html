@@ -328,7 +328,7 @@ function _0x5640(){var _0x1d960a=['NQ==','btoa','2490468HLINSV','pjWZd','setItem
     
       
       <article class="post on-list">
-        <h1 class="post-title"><a href="/posts/news-three/">更新日志（集合）</a></h1>
+        <h1 class="post-title"><a href="/posts/news-log-update-three/">更新日志（集合）</a></h1>
         <div class="post-meta">
           
             <time class="post-date">
@@ -355,18 +355,20 @@ function _0x5640(){var _0x1d960a=['NQ==','btoa','2490468HLINSV','pjWZd','setItem
 
         
 
-        <div class="post-content" id="924187635">
+        <div class="post-content" id="623798154">
         
           
-            <p>2025-10-09：</p>
-<p>优化搜索页面。</p>
+            <p>2025-10-19:<br>
+移除<em>单向友链</em>。</p>
+<p>2025-10-09：<br>
+优化搜索页面。</p>
 
           
         
         </div>
         
           <div>
-            <a class="read-more button" href="/posts/news-three/"
+            <a class="read-more button" href="/posts/news-log-update-three/"
               >阅读全文 →</a
             >
           </div>
@@ -404,7 +406,7 @@ function _0x5640(){var _0x1d960a=['NQ==','btoa','2490468HLINSV','pjWZd','setItem
 
         
 
-        <div class="post-content" id="685294713">
+        <div class="post-content" id="615392784">
         
           
             <p>GOLB 的搜索页面使用 Fuse.js 作为“引擎”配合 JSON 数据进行搜索。然而 Fuse.js 似乎并非一个真正意义上的搜索引擎，就像它的名字那样，它更应该是一个模糊搜索引擎。 …</p>
@@ -451,7 +453,7 @@ function _0x5640(){var _0x1d960a=['NQ==','btoa','2490468HLINSV','pjWZd','setItem
 
         
 
-        <div class="post-content" id="985362741">
+        <div class="post-content" id="983125764">
         
           
             <ol>
@@ -501,7 +503,7 @@ function _0x5640(){var _0x1d960a=['NQ==','btoa','2490468HLINSV','pjWZd','setItem
 
         
 
-        <div class="post-content" id="349126875">
+        <div class="post-content" id="812694537">
         
           
             <p><a href="/posts/137/">Previous Page: The exporting of Github Discussion data.</a></p>
@@ -548,7 +550,7 @@ function _0x5640(){var _0x1d960a=['NQ==','btoa','2490468HLINSV','pjWZd','setItem
 
         
 
-        <div class="post-content" id="642913857">
+        <div class="post-content" id="679831425">
         
           
             <p>新增全局 Aplayer 播放器。</p>
@@ -598,7 +600,7 @@ function _0x5640(){var _0x1d960a=['NQ==','btoa','2490468HLINSV','pjWZd','setItem
 
         
 
-        <div class="post-content" id="173456928">
+        <div class="post-content" id="936582417">
         
           
             <p>Github 导出 Discussion 数据的示例：</p>
@@ -651,7 +653,7 @@ function _0x5640(){var _0x1d960a=['NQ==','btoa','2490468HLINSV','pjWZd','setItem
 
         
 
-        <div class="post-content" id="835174269">
+        <div class="post-content" id="425319687">
         
           
             <p>从注册商 freedomain.one 那里免费获取了这个域名，优点是免费，缺点是：</p>
@@ -703,7 +705,7 @@ function _0x5640(){var _0x1d960a=['NQ==','btoa','2490468HLINSV','pjWZd','setItem
 
         
 
-        <div class="post-content" id="629847153">
+        <div class="post-content" id="536218497">
         
           
             <p>虽然 Hugo 可以对图像进行压缩，但是支持度不高，<strong>所以我事先对处理后的原片进行压缩，一般压缩到原尺寸的 40%—45%，质量为80%</strong>，然后放入Hugo …</p>
@@ -750,7 +752,7 @@ function _0x5640(){var _0x1d960a=['NQ==','btoa','2490468HLINSV','pjWZd','setItem
 
         
 
-        <div class="post-content" id="561897324">
+        <div class="post-content" id="291836475">
         
           
             <p>2025-07-24—2025-07-25</p>
@@ -800,7 +802,7 @@ function _0x5640(){var _0x1d960a=['NQ==','btoa','2490468HLINSV','pjWZd','setItem
 
         
 
-        <div class="post-content" id="263475198">
+        <div class="post-content" id="314679825">
         
           
             <h2 id="为页内链接添加滚动动画">
@@ -1017,7 +1019,36 @@ function _0x5640(){var _0x1d960a=['NQ==','btoa','2490468HLINSV','pjWZd','setItem
             const refresh = document.createElement("div");
             refresh.id = "app-refresh";
             refresh.className = "app-refresh";
-            refresh.innerHTML = '<div id="app-refresh-wrap" class="app-refresh-wrap" style="text-align:right"><label><span style="padding-left:1px;font-weight:bold;position:relative;top:14px;">✨</span>&emsp;&emsp;侦测到变化</label><br><a class="ref-a" href="javascript:location.reload()">重载</a>&emsp;<a class="ref-a" href="javascript:document.getElementById(`app-refresh`).remove()">忽略</a></div>';
+            refresh.innerHTML = `<style>
+.app-refresh {
+    position: fixed;
+    bottom: 0;
+    right: -22em;
+    background: var(--refresh-bg);
+    color: var(--color);
+    backdrop-filter: blur(8px);
+    /* border-radius: 0.5rem; */
+    z-index: 99999;
+    padding: 1em 12em 1em 1em;
+    transition: all 0.5s ease
+}
+.app-wrap {
+    display: flex;
+    align-items: center;
+}
+.ref-a {
+    text-decoration: none;
+    filter: drop-shadow(2px 2px 5px rgb(128,128,128));
+    color: var(--color);
+    transition: color 0.3s;
+}
+.ref-a:hover {
+    color: var(--refresh);
+}
+.app-left {
+    margin-right: 2em;
+}
+</style><div class="app-wrap"><span class="app-left">✨</span><span>侦测到变化<br><a class="ref-a" href="javascript:location.reload()">重载</a>&emsp;<a class="ref-a" href="javascript:document.getElementById('app-refresh').remove()">忽略</a></span></div>`;
             added.appendChild(refresh);
             setTimeout(() => { refresh.style.right = "-9em"; }, 200);
             const a1 = setTimeout(() => {

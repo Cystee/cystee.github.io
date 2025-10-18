@@ -209,4 +209,18 @@ const music = [
         cover: '/music/default.jpg',
         lrc: '/music/Voice/汪苏泷 - 一笑倾城.lrc'
     },
+    {
+        name: '爱错',
+        artist: '王力宏',
+        url: '/music/Voice/王力宏-爱错.flac',
+        cover: '/music/default.jpg',
+        lrc: '/music/Voice/王力宏 - 爱错.lrc'
+    },
+    {
+        name: '忘了',
+        artist: '周林枫',
+        url: '/music/Voice/忘了-周林枫-261964280-2000.flac',
+        cover: '/music/default.jpg',
+        lrc: '/music/Voice/周林枫 - 忘了.lrc'
+    },
 ]

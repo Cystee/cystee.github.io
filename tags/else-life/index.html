@@ -407,7 +407,7 @@ function _0x5640(){var _0x1d960a=['NQ==','btoa','2490468HLINSV','pjWZd','setItem
 
         
 
-        <div class="post-content" id="286139754">
+        <div class="post-content" id="487162539">
         
           
             <blockquote>
@@ -426,17 +426,17 @@ function _0x5640(){var _0x1d960a=['NQ==','btoa','2490468HLINSV','pjWZd','setItem
         
         
           <style>
-            .post-content[id="286139754"] p {
+            .post-content[id="487162539"] p {
               line-height: 1.8;
             }
-            .post-content[id="286139754"] li {
+            .post-content[id="487162539"] li {
               line-height: 1.8;
             }
             @media (max-width: 900px) {
-              .post-content[id="286139754"] p {
+              .post-content[id="487162539"] p {
                 line-height: 1.618;
               }
-              .post-content[id="286139754"] li {
+              .post-content[id="487162539"] li {
                 line-height: 1.618;
               }
             }
@@ -474,7 +474,7 @@ function _0x5640(){var _0x1d960a=['NQ==','btoa','2490468HLINSV','pjWZd','setItem
 
         
 
-        <div class="post-content" id="475381629">
+        <div class="post-content" id="751964328">
         
           
             <blockquote>
@@ -523,7 +523,7 @@ function _0x5640(){var _0x1d960a=['NQ==','btoa','2490468HLINSV','pjWZd','setItem
 
         
 
-        <div class="post-content" id="578946213">
+        <div class="post-content" id="931768425">
         
           
             <p>这是关于真正的自由的讨论。首先，要知道导致不自由的存在。不自由，就是存在限制。限制是不能避免的，有些可以。限制可以分为绝对限制，非必要限制。前者不可避免，后者可以。前者是与生存紧密联系的，食物，庇护 …</p>
@@ -540,7 +540,7 @@ function _0x5640(){var _0x1d960a=['NQ==','btoa','2490468HLINSV','pjWZd','setItem
         
         
           <style>
-            .post-content[id="578946213"] p {
+            .post-content[id="931768425"] p {
               text-indent: unset;
               margin-block-start: 1em;
               margin-block-end: 1em;
@@ -578,7 +578,7 @@ function _0x5640(){var _0x1d960a=['NQ==','btoa','2490468HLINSV','pjWZd','setItem
 
         
 
-        <div class="post-content" id="641328579">
+        <div class="post-content" id="489137625">
         
           
             <p>They say love is a river—its currents pulling us toward euphoric waterfalls or dragging us into …</p>
@@ -594,17 +594,17 @@ function _0x5640(){var _0x1d960a=['NQ==','btoa','2490468HLINSV','pjWZd','setItem
         
         
           <style>
-            .post-content[id="641328579"] p {
+            .post-content[id="489137625"] p {
               line-height: 1.8;
             }
-            .post-content[id="641328579"] li {
+            .post-content[id="489137625"] li {
               line-height: 1.8;
             }
             @media (max-width: 900px) {
-              .post-content[id="641328579"] p {
+              .post-content[id="489137625"] p {
                 line-height: 1.618;
               }
-              .post-content[id="641328579"] li {
+              .post-content[id="489137625"] li {
                 line-height: 1.618;
               }
             }
@@ -612,7 +612,7 @@ function _0x5640(){var _0x1d960a=['NQ==','btoa','2490468HLINSV','pjWZd','setItem
         
         
           <style>
-            .post-content[id="641328579"] p {
+            .post-content[id="489137625"] p {
               text-indent: unset;
               margin-block-start: 1em;
               margin-block-end: 1em;
@@ -650,7 +650,7 @@ function _0x5640(){var _0x1d960a=['NQ==','btoa','2490468HLINSV','pjWZd','setItem
 
         
 
-        <div class="post-content" id="836971452">
+        <div class="post-content" id="617259348">
         
           
             <blockquote>
@@ -856,7 +856,36 @@ function _0x5640(){var _0x1d960a=['NQ==','btoa','2490468HLINSV','pjWZd','setItem
             const refresh = document.createElement("div");
             refresh.id = "app-refresh";
             refresh.className = "app-refresh";
-            refresh.innerHTML = '<div id="app-refresh-wrap" class="app-refresh-wrap" style="text-align:right"><label><span style="padding-left:1px;font-weight:bold;position:relative;top:14px;">✨</span>&emsp;&emsp;侦测到变化</label><br><a class="ref-a" href="javascript:location.reload()">重载</a>&emsp;<a class="ref-a" href="javascript:document.getElementById(`app-refresh`).remove()">忽略</a></div>';
+            refresh.innerHTML = `<style>
+.app-refresh {
+    position: fixed;
+    bottom: 0;
+    right: -22em;
+    background: var(--refresh-bg);
+    color: var(--color);
+    backdrop-filter: blur(8px);
+    /* border-radius: 0.5rem; */
+    z-index: 99999;
+    padding: 1em 12em 1em 1em;
+    transition: all 0.5s ease
+}
+.app-wrap {
+    display: flex;
+    align-items: center;
+}
+.ref-a {
+    text-decoration: none;
+    filter: drop-shadow(2px 2px 5px rgb(128,128,128));
+    color: var(--color);
+    transition: color 0.3s;
+}
+.ref-a:hover {
+    color: var(--refresh);
+}
+.app-left {
+    margin-right: 2em;
+}
+</style><div class="app-wrap"><span class="app-left">✨</span><span>侦测到变化<br><a class="ref-a" href="javascript:location.reload()">重载</a>&emsp;<a class="ref-a" href="javascript:document.getElementById('app-refresh').remove()">忽略</a></span></div>`;
             added.appendChild(refresh);
             setTimeout(() => { refresh.style.right = "-9em"; }, 200);
             const a1 = setTimeout(() => {

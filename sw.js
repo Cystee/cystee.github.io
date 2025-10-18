@@ -10,7 +10,7 @@ workbox.core.clientsClaim();
 
 // 注册成功后要立即缓存的资源列表
 // 具体缓存列表在gulpfile.js中配置，见下文
-workbox.precaching.precacheAndRoute([{"revision":"25afb8450e7986f7674f2b3508ecdbfb","url":"./404.html"},{"revision":"afcc2f704808efe33d3c5b5b8d18ddc1","url":"./index.html"},{"revision":"623425f5098bc41946332ae9d01f3c18","url":"./style.min.css"},{"revision":"d7cd18df2c8e56d35e26cd5c717db479","url":"./css/style.css"},{"revision":"cfa332e188cf9a9f7cd4a834f7043d5e","url":"./bundle.min.js"},{"revision":"c91967c3275e216d22ec4521da57c577","url":"./fonts.min.css"}]);
+workbox.precaching.precacheAndRoute([{"revision":"6452e8da87ca23d9981605999d878d8f","url":"./404.html"},{"revision":"3bf6f2766135b01ec23d7f6d537f0390","url":"./index.html"},{"revision":"3e482cbf4b3000831be507ba2d85117d","url":"./style.min.css"},{"revision":"d7cd18df2c8e56d35e26cd5c717db479","url":"./css/style.css"},{"revision":"cfa332e188cf9a9f7cd4a834f7043d5e","url":"./bundle.min.js"},{"revision":"c91967c3275e216d22ec4521da57c577","url":"./fonts.min.css"}]);
 
 // 清空过期缓存
 workbox.precaching.cleanupOutdatedCaches();
